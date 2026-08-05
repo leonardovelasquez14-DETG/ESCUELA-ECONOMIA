@@ -1,0 +1,87 @@
+/* =============================================
+   PAGE HERO — Banner de páginas internas
+   Escuela de Economía, UNT
+   ============================================= */
+
+/* ── Banner de página interna ── */
+.page-hero {
+  padding-top: calc(var(--navbar-h) + var(--space-16));
+  padding-bottom: var(--space-16);
+  background: var(--gradient-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--clr-bg);
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+.page-hero--alt::after {
+  background: var(--clr-bg-alt);
+}
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+}
+
+.page-hero__breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.65);
+  margin-bottom: var(--space-5);
+}
+
+.page-hero__breadcrumb a {
+  color: var(--clr-accent-light);
+  transition: color var(--transition-fast);
+}
+
+.page-hero__breadcrumb a:hover { color: #fff; }
+
+.page-hero__breadcrumb-sep {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.7rem;
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--space-4);
+}
+
+.page-hero__title span {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-hero__subtitle {
+  font-size: var(--text-lg);
+  color: rgba(255,255,255,0.8);
+  max-width: 580px;
+  margin-inline: auto;
+  line-height: 1.6;
+}

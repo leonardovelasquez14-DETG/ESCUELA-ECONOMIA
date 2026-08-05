@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bolsa de trabajo y red de egresados de la Escuela de Economía UNT. Conectamos economistas con oportunidades laborales." />
+  <title>Egresados — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="js/theme-toggle.js"></script>
+  <style>
+    #back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--gradient-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(16px);transition:all var(--transition-base);z-index:900;border:none;}
+    #back-to-top.visible{opacity:1;transform:translateY(0);}
+    #back-to-top:hover{transform:translateY(-4px);}
+    @keyframes bounceBtn{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(20deg)}100%{transform:scale(1) rotate(0deg)}}
+    .bounce-anim{animation:bounceBtn 0.4s ease;}
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <div class="page-hero" aria-label="Egresados">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Egresados</span>
+          </nav>
+          <h1 class="page-hero__title">Egresados y <span>Bolsa de Trabajo</span></h1>
+          <p class="page-hero__subtitle">Conectamos a nuestros economistas con oportunidades en el sector público, privado e internacional.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas de egresados -->
+    <section class="stats" aria-label="Estadísticas de egresados">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat-card reveal"><div class="stat-card__icon">🎓</div><div class="stat-card__number"><span data-counter="3500">0</span><span class="suffix">+</span></div><div class="stat-card__label">Egresados totales</div></div>
+          <div class="stat-card reveal reveal-delay-1"><div class="stat-card__icon">💼</div><div class="stat-card__number"><span data-counter="85">0</span><span class="suffix">%</span></div><div class="stat-card__label">Empleabilidad al año de egreso</div></div>
+          <div class="stat-card reveal reveal-delay-2"><div class="stat-card__icon">🤝</div><div class="stat-card__number"><span data-counter="40">0</span><span class="suffix">+</span></div><div class="stat-card__label">Empresas aliadas</div></div>
+          <div class="stat-card reveal reveal-delay-3"><div class="stat-card__icon">🌍</div><div class="stat-card__number"><span data-counter="8">0</span></div><div class="stat-card__label">Países con egresados</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bolsa de trabajo -->
+    <section class="section" aria-labelledby="bolsa-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Oportunidades Laborales</div>
+          <h2 id="bolsa-title" class="section-title">Bolsa de <span>Trabajo</span></h2>
+          <p class="section-subtitle">Vacantes disponibles para egresados y estudiantes de economía.</p>
+        </div>
+
+        <div class="job-list" style="max-width:900px;margin-inline:auto;">
+
+          <div class="job-card reveal">
+            <div class="job-card__left">
+              <div class="job-card__title">Analista Económico Senior</div>
+              <div class="job-card__company">🏛️ Banco Central de Reserva del Perú — Lima</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">Tiempo completo</span></div>
+          </div>
+
+          <div class="job-card reveal reveal-delay-1">
+            <div class="job-card__left">
+              <div class="job-card__title">Consultor en Políticas Públicas</div>
+              <div class="job-card__company">🏛️ Ministerio de Economía y Finanzas — Lima</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">Contrato</span></div>
+          </div>
+
+          <div class="job-card reveal reveal-delay-2">
+            <div class="job-card__left">
+              <div class="job-card__title">Economista Junior — Proyectos de Inversión</div>
+              <div class="job-card__company">🏛️ Municipalidad Provincial de Trujillo</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">CAS</span></div>
+          </div>
+
+          <div class="job-card reveal">
+            <div class="job-card__left">
+              <div class="job-card__title">Analista de Riesgo Financiero</div>
+              <div class="job-card__company">🏢 Scotiabank Perú — Trujillo</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">Tiempo completo</span></div>
+          </div>
+
+          <div class="job-card reveal reveal-delay-1">
+            <div class="job-card__left">
+              <div class="job-card__title">Especialista en Regulación Económica</div>
+              <div class="job-card__company">🏛️ INDECOPI — Gerencia de Estudios Económicos</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">CAP</span></div>
+          </div>
+
+          <div class="job-card reveal reveal-delay-2">
+            <div class="job-card__left">
+              <div class="job-card__title">Practicante Profesional — Economía Aplicada</div>
+              <div class="job-card__company">🌐 GRADE — Grupo de Análisis para el Desarrollo</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">Prácticas</span></div>
+          </div>
+
+          <div class="job-card reveal">
+            <div class="job-card__left">
+              <div class="job-card__title">Economista en Planificación Estratégica</div>
+              <div class="job-card__company">🏭 Corporación Backus — Trujillo</div>
+            </div>
+            <div class="job-card__right"><span class="job-card__type">Tiempo completo</span></div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:var(--space-10);" class="reveal">
+          <a href="contacto.html" class="btn btn-primary" id="bolsa-contacto">
+            <i class="fa-solid fa-briefcase"></i> Publicar una vacante
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Red Alumni -->
+    <section class="section section--alt" aria-labelledby="alumni-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Red Alumni</div>
+          <h2 id="alumni-title" class="section-title">Comunidad de <span>Egresados</span></h2>
+          <p class="section-subtitle">Únete a la red de más de 3,500 economistas egresados de la UNT.</p>
+        </div>
+
+        <div class="alumni__numbers" style="max-width:700px;margin-inline:auto;">
+          <div class="alumni-stat reveal"><div class="alumni-stat__number">12</div><div class="alumni-stat__label">Convenios laborales vigentes</div></div>
+          <div class="alumni-stat reveal reveal-delay-1"><div class="alumni-stat__number">8</div><div class="alumni-stat__label">Países con egresados activos</div></div>
+          <div class="alumni-stat reveal reveal-delay-2"><div class="alumni-stat__number">+40</div><div class="alumni-stat__label">Empresas aliadas</div></div>
+          <div class="alumni-stat reveal reveal-delay-3"><div class="alumni-stat__number">85%</div><div class="alumni-stat__label">Empleabilidad al primer año</div></div>
+        </div>
+
+        <div style="text-align:center;margin-top:var(--space-10);" class="reveal">
+          <a href="contacto.html" class="btn btn-outline" id="alumni-registro">
+            <i class="fa-solid fa-users"></i> Registrarme como egresado
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Líneas de investigación y publicaciones académicas de la Escuela de Economía UNT." />
+  <title>Investigación — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="js/theme-toggle.js"></script>
+  <style>
+    #back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--gradient-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(16px);transition:all var(--transition-base);z-index:900;border:none;}
+    #back-to-top.visible{opacity:1;transform:translateY(0);}
+    #back-to-top:hover{transform:translateY(-4px);}
+    @keyframes bounceBtn{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(20deg)}100%{transform:scale(1) rotate(0deg)}}
+    .bounce-anim{animation:bounceBtn 0.4s ease;}
+
+    .pub-card {
+      background: var(--clr-surface); border: 1px solid var(--clr-border);
+      border-radius: var(--radius-lg); padding: var(--space-6);
+      display: flex; gap: var(--space-5); align-items: flex-start;
+      transition: all var(--transition-base);
+    }
+    .pub-card:hover { border-color: var(--clr-primary); box-shadow: var(--shadow-md); transform: translateX(4px); }
+    .pub-card__icon { width:48px;height:48px;border-radius:var(--radius-md);background:rgba(200,16,46,0.1);display:flex;align-items:center;justify-content:center;color:var(--clr-primary);font-size:1.4rem;flex-shrink:0; }
+    .pub-card__content { flex:1; }
+    .pub-card__title { font-size:var(--text-base);font-weight:700;color:var(--clr-text);margin-bottom:var(--space-1);line-height:1.4; }
+    .pub-card__authors { font-size:var(--text-sm);color:var(--clr-text-muted);margin-bottom:var(--space-2); }
+    .pub-card__journal { font-size:var(--text-xs);color:var(--clr-primary);font-weight:600; }
+    .pub-card__year { font-size:var(--text-xs);color:var(--clr-text-muted);margin-left:auto;flex-shrink:0;padding-top:2px; }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <div class="page-hero page-hero--alt" aria-label="Investigación">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Investigación</span>
+          </nav>
+          <h1 class="page-hero__title">Investigación y <span>Publicaciones</span></h1>
+          <p class="page-hero__subtitle">Generamos conocimiento para entender y transformar la realidad económica del Perú.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Líneas de investigación -->
+    <section class="section" aria-labelledby="lineas-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Ciencia Económica</div>
+          <h2 id="lineas-title" class="section-title">Líneas de <span>Investigación</span></h2>
+        </div>
+        <div class="research__grid">
+          <div class="research-card reveal"><div class="research-card__icon">📊</div><h3 class="research-card__title">Economía Regional</h3><p class="research-card__desc">Análisis del desarrollo económico de La Libertad y el norte peruano, con énfasis en agro-exportaciones, minería y manufactura.</p><a href="#" class="research-card__link" id="inv-regional">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+          <div class="research-card reveal reveal-delay-1"><div class="research-card__icon">💹</div><h3 class="research-card__title">Macroeconomía y Políticas Públicas</h3><p class="research-card__desc">Estudio de la política fiscal, monetaria y social en el Perú, con modelos econométricos y evidencia empírica.</p><a href="#" class="research-card__link" id="inv-macro">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+          <div class="research-card reveal reveal-delay-2"><div class="research-card__icon">🌿</div><h3 class="research-card__title">Economía Ambiental</h3><p class="research-card__desc">Valoración económica de los recursos naturales, cambio climático e impacto ambiental de las actividades productivas.</p><a href="#" class="research-card__link" id="inv-ambiental">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+          <div class="research-card reveal"><div class="research-card__icon">🏘️</div><h3 class="research-card__title">Economía Social y Pobreza</h3><p class="research-card__desc">Investigación sobre desigualdad, pobreza multidimensional y efectividad de los programas sociales en el Perú.</p><a href="#" class="research-card__link" id="inv-social">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+          <div class="research-card reveal reveal-delay-1"><div class="research-card__icon">🤖</div><h3 class="research-card__title">Economía Digital y Fintech</h3><p class="research-card__desc">Impacto de la transformación digital, criptomonedas, e-commerce y plataformas digitales en la economía peruana.</p><a href="#" class="research-card__link" id="inv-digital">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+          <div class="research-card reveal reveal-delay-2"><div class="research-card__icon">🌐</div><h3 class="research-card__title">Comercio Internacional</h3><p class="research-card__desc">Análisis de los TLCs, balanza comercial, competitividad exportadora y cadenas globales de valor en el contexto peruano.</p><a href="#" class="research-card__link" id="inv-comercio">Explorar línea <i class="fa-solid fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publicaciones recientes -->
+    <section class="section section--alt" aria-labelledby="pub-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Producción Científica</div>
+          <h2 id="pub-title" class="section-title">Publicaciones <span>Recientes</span></h2>
+          <p class="section-subtitle">Selección de publicaciones de docentes e investigadores de la escuela.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+          <div class="pub-card reveal">
+            <div class="pub-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-card__content">
+              <div class="pub-card__title">Crecimiento económico y desigualdad en las regiones del Perú: Un análisis de convergencia (2000–2022)</div>
+              <div class="pub-card__authors">Méndez Torres, C.; Ríos Villanueva, A.; Paredes Castro, L.</div>
+              <div class="pub-card__journal">📖 Latin American Economic Review — Scopus Q1</div>
+            </div>
+            <div class="pub-card__year">2024</div>
+          </div>
+
+          <div class="pub-card reveal reveal-delay-1">
+            <div class="pub-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-card__content">
+              <div class="pub-card__title">Impacto de los programas de transferencia condicionada sobre la pobreza multidimensional en La Libertad</div>
+              <div class="pub-card__authors">Gutiérrez Sánchez, M.; Castro Flores, R.</div>
+              <div class="pub-card__journal">📖 Revista de Economía y Sociedad — SciELO</div>
+            </div>
+            <div class="pub-card__year">2024</div>
+          </div>
+
+          <div class="pub-card reveal reveal-delay-2">
+            <div class="pub-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-card__content">
+              <div class="pub-card__title">Valoración económica del recurso hídrico en la cuenca del río Moche: Una aplicación del método de valoración contingente</div>
+              <div class="pub-card__authors">Gutiérrez Sánchez, M.; Aguilar Pérez, J.</div>
+              <div class="pub-card__journal">📖 Economía y Ambiente — Revista Latinoamericana</div>
+            </div>
+            <div class="pub-card__year">2023</div>
+          </div>
+
+          <div class="pub-card reveal">
+            <div class="pub-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-card__content">
+              <div class="pub-card__title">Determinantes del tipo de cambio real en Perú: Un modelo VAR-VECM (2005–2021)</div>
+              <div class="pub-card__authors">Paredes Castro, L.; Saavedra López, M.</div>
+              <div class="pub-card__journal">📖 Apuntes: Revista de Ciencias Sociales — Scopus</div>
+            </div>
+            <div class="pub-card__year">2023</div>
+          </div>
+
+          <div class="pub-card reveal reveal-delay-1">
+            <div class="pub-card__icon"><i class="fa-solid fa-file-lines"></i></div>
+            <div class="pub-card__content">
+              <div class="pub-card__title">Adopción de tecnología financiera (Fintech) en pequeñas y medianas empresas en la ciudad de Trujillo</div>
+              <div class="pub-card__authors">Ríos Villanueva, A.; Torres Mendoza, K.</div>
+              <div class="pub-card__journal">📖 Contaduría y Administración — Scopus Q2</div>
+            </div>
+            <div class="pub-card__year">2023</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

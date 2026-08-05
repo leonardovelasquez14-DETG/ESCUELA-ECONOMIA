@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conoce la historia, misión, visión y valores de la Escuela de Economía de la Universidad Nacional de Trujillo." />
+  <title>Nosotros — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="js/theme-toggle.js"></script>
+  <style>
+    #back-to-top { position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--gradient-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(16px);transition:all var(--transition-base);z-index:900;border:none; }
+    #back-to-top.visible{opacity:1;transform:translateY(0);}
+    #back-to-top:hover{transform:translateY(-4px);}
+    @keyframes bounceBtn{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(20deg)}100%{transform:scale(1) rotate(0deg)}}
+    .bounce-anim{animation:bounceBtn 0.4s ease;}
+  </style>
+</head>
+<body>
+
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <!-- Encabezado de página -->
+    <div class="page-hero" aria-label="Nosotros">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Nosotros</span>
+          </nav>
+          <h1 class="page-hero__title">Acerca de la <span>Escuela</span></h1>
+          <p class="page-hero__subtitle">Historia, misión, visión y los valores que guían nuestra formación académica.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Acerca de -->
+    <section class="section" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__image-wrap reveal">
+            <img src="assets/images/hero_campus.jpg" alt="Campus de la Universidad Nacional de Trujillo" class="about__image" loading="lazy" />
+            <div class="about__image-badge">
+              <strong>1824</strong>
+              <span>Fundación UNT</span>
+            </div>
+          </div>
+
+          <div class="about__content reveal reveal-delay-2">
+            <div class="section-header" style="text-align:left;margin-bottom:var(--space-8);">
+              <div class="section-label">Nuestra Historia</div>
+              <h2 id="about-title" class="section-title">Una tradición de <span>excelencia</span> académica</h2>
+            </div>
+            <p class="about__text">
+              La Escuela Académico Profesional de Economía de la Universidad Nacional de Trujillo
+              es una de las instituciones académicas más reconocidas del norte del Perú. Fue creada
+              con el propósito de contribuir al análisis y solución de los grandes problemas económicos
+              del país, formando profesionales competentes, críticos y comprometidos con la realidad nacional.
+            </p>
+            <p class="about__text" style="margin-top:var(--space-4);">
+              A lo largo de más de seis décadas, hemos formado miles de economistas que hoy se
+              desempeñan en el sector público, empresa privada, organismos internacionales y la academia,
+              contribuyendo al desarrollo económico y social del Perú.
+            </p>
+            <div style="margin-top:var(--space-6);">
+              <a href="programas.html" class="btn btn-primary" id="about-cta-programas">
+                <i class="fa-solid fa-graduation-cap"></i> Ver programas académicos
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="section section--alt" aria-label="Misión, Visión y Valores">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Identidad Institucional</div>
+          <h2 class="section-title">Misión, Visión y <span>Valores</span></h2>
+        </div>
+        <div class="about__pillars" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-6);">
+          <div class="pillar-card reveal">
+            <div class="pillar-card__icon">🎯</div>
+            <div class="pillar-card__title">Misión</div>
+            <div class="pillar-card__desc">
+              Formar economistas competentes, críticos y comprometidos con el desarrollo sostenible
+              del país, mediante una sólida preparación teórica, metodológica y práctica.
+            </div>
+          </div>
+          <div class="pillar-card reveal reveal-delay-1">
+            <div class="pillar-card__icon">🔭</div>
+            <div class="pillar-card__title">Visión</div>
+            <div class="pillar-card__desc">
+              Ser la escuela de economía líder del norte del Perú, reconocida por su calidad académica,
+              investigación relevante e impacto en el desarrollo económico regional y nacional.
+            </div>
+          </div>
+          <div class="pillar-card reveal reveal-delay-2">
+            <div class="pillar-card__icon">⚖️</div>
+            <div class="pillar-card__title">Valores</div>
+            <div class="pillar-card__desc">
+              Integridad, excelencia académica, innovación constante, responsabilidad social
+              y pensamiento crítico fundamentan nuestra comunidad universitaria.
+            </div>
+          </div>
+          <div class="pillar-card reveal reveal-delay-3">
+            <div class="pillar-card__icon">🌎</div>
+            <div class="pillar-card__title">Impacto</div>
+            <div class="pillar-card__desc">
+              Más de 3,500 egresados en instituciones públicas, empresas líderes,
+              organismos internacionales y universidades de prestigio en todo el Perú.
+            </div>
+          </div>
+          <div class="pillar-card reveal reveal-delay-1">
+            <div class="pillar-card__icon">📚</div>
+            <div class="pillar-card__title">Formación</div>
+            <div class="pillar-card__desc">
+              Currícula actualizada con enfoque en economía aplicada, análisis cuantitativo,
+              políticas públicas y habilidades para el mundo digital.
+            </div>
+          </div>
+          <div class="pillar-card reveal reveal-delay-2">
+            <div class="pillar-card__icon">🤝</div>
+            <div class="pillar-card__title">Comunidad</div>
+            <div class="pillar-card__desc">
+              Red activa de docentes, egresados y estudiantes comprometidos con la mejora
+              continua y el desarrollo económico del norte peruano.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section class="stats" aria-label="Cifras de la escuela">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat-card reveal"><div class="stat-card__icon">🎓</div><div class="stat-card__number"><span data-counter="3500">0</span><span class="suffix">+</span></div><div class="stat-card__label">Egresados</div></div>
+          <div class="stat-card reveal reveal-delay-1"><div class="stat-card__icon">📅</div><div class="stat-card__number"><span data-counter="65">0</span><span class="suffix">años</span></div><div class="stat-card__label">De trayectoria</div></div>
+          <div class="stat-card reveal reveal-delay-2"><div class="stat-card__icon">👨‍🏫</div><div class="stat-card__number"><span data-counter="48">0</span></div><div class="stat-card__label">Docentes</div></div>
+          <div class="stat-card reveal reveal-delay-3"><div class="stat-card__icon">🔬</div><div class="stat-card__number"><span data-counter="120">0</span><span class="suffix">+</span></div><div class="stat-card__label">Publicaciones</div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>

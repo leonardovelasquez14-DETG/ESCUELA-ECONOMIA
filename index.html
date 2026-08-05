@@ -3,916 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Escuela Académico Profesional de Economía de la Universidad Nacional de Trujillo. Formamos economistas líderes con visión crítica y compromiso social." />
-  <meta name="keywords" content="Economía, UNT, Universidad Nacional de Trujillo, Escuela de Economía, licenciatura, maestría, investigación" />
-  <meta name="author" content="Universidad Nacional de Trujillo" />
-  <meta property="og:title" content="Escuela de Economía — Universidad Nacional de Trujillo" />
-  <meta property="og:description" content="Formamos economistas líderes con visión crítica y compromiso social." />
-  <meta property="og:type" content="website" />
-  <title>Escuela de Economía — Universidad Nacional de Trujillo</title>
-
-  <!-- Font Awesome -->
+  <meta name="description" content="Escuela Académico Profesional de Economía — Universidad Nacional de Trujillo. Formamos economistas líderes con visión crítica y compromiso social." />
+  <title>Inicio — Escuela de Economía · UNT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="css/reset.css" />
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/theme.css" />
   <link rel="stylesheet" href="css/main.css" />
-
-  <!-- Theme script (se ejecuta antes del render para evitar flash) -->
   <script src="js/theme-toggle.js"></script>
-
   <style>
-    /* Back-to-top button */
-    #back-to-top {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--gradient-primary);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      box-shadow: var(--shadow-lg);
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: all var(--transition-base);
-      z-index: 900;
-      border: none;
-    }
-    #back-to-top.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    #back-to-top:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-xl), var(--shadow-glow);
-    }
-    .theme-toggle .bounce-anim {
-      animation: bounceBtn 0.4s ease;
-    }
-    @keyframes bounceBtn {
-      0%  { transform: scale(1); }
-      40% { transform: scale(1.25) rotate(20deg); }
-      100%{ transform: scale(1) rotate(0deg); }
-    }
+    #back-to-top { position:fixed; bottom:2rem; right:2rem; width:48px; height:48px; border-radius:50%; background:var(--gradient-primary); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem; box-shadow:var(--shadow-lg); cursor:pointer; opacity:0; transform:translateY(16px); transition:all var(--transition-base); z-index:900; border:none; }
+    #back-to-top.visible { opacity:1; transform:translateY(0); }
+    #back-to-top:hover { transform:translateY(-4px); box-shadow:var(--shadow-xl); }
+    @keyframes bounceBtn { 0%{transform:scale(1)} 40%{transform:scale(1.25) rotate(20deg)} 100%{transform:scale(1) rotate(0deg)} }
+    .bounce-anim { animation: bounceBtn 0.4s ease; }
   </style>
 </head>
 <body>
 
-  <!-- ══════════════════════════════════════════
-       NAVBAR
-  ══════════════════════════════════════════ -->
-  <header id="navbar" class="navbar" role="banner">
-    <div class="container">
-      <div class="navbar__inner">
-
-        <!-- Marca -->
-        <a href="#inicio" class="navbar__brand" aria-label="Inicio — Escuela de Economía UNT">
-          <img src="assets/logo/logo_unt.png" alt="Escudo UNT" class="navbar__logo" />
-          <div class="navbar__brand-text">
-            <span class="navbar__brand-title">Universidad Nacional de Trujillo</span>
-            <span class="navbar__brand-sub">Escuela de Economía</span>
-          </div>
-        </a>
-
-        <!-- Nav desktop -->
-        <nav class="navbar__nav" role="navigation" aria-label="Menú principal">
-          <a href="#inicio"       class="navbar__link active">Inicio</a>
-          <a href="#acerca"       class="navbar__link">Nosotros</a>
-          <a href="#programas"    class="navbar__link">Programas</a>
-          <a href="#noticias"     class="navbar__link">Noticias</a>
-          <a href="#investigacion"class="navbar__link">Investigación</a>
-          <a href="#docentes"     class="navbar__link">Docentes</a>
-          <a href="#contacto"     class="navbar__link">Contacto</a>
-        </nav>
-
-        <!-- Acciones -->
-        <div class="navbar__actions">
-          <button
-            id="theme-toggle-btn"
-            class="theme-toggle"
-            aria-label="Cambiar tema"
-            title="Cambiar tema"
-          >🌙</button>
-
-          <button
-            id="navbar-hamburger"
-            class="navbar__hamburger"
-            aria-label="Abrir menú"
-            aria-expanded="false"
-            aria-controls="navbar-mobile"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </header>
-
-  <!-- Menú mobile -->
-  <nav id="navbar-mobile" class="navbar__mobile" role="navigation" aria-label="Menú móvil">
-    <a href="#inicio"        class="navbar__mobile-link">🏛️ Inicio</a>
-    <a href="#acerca"        class="navbar__mobile-link">📖 Nosotros</a>
-    <a href="#programas"     class="navbar__mobile-link">🎓 Programas</a>
-    <a href="#noticias"      class="navbar__mobile-link">📰 Noticias</a>
-    <a href="#investigacion" class="navbar__mobile-link">🔬 Investigación</a>
-    <a href="#docentes"      class="navbar__mobile-link">👨‍🏫 Docentes</a>
-    <a href="#egresados"     class="navbar__mobile-link">💼 Egresados</a>
-    <a href="#contacto"      class="navbar__mobile-link">📍 Contacto</a>
-  </nav>
+  <div id="navbar-container"></div>
 
   <main id="main-content">
 
-    <!-- ══════════════════════════════════════════
-         HERO
-    ══════════════════════════════════════════ -->
+    <!-- ══ HERO ══ -->
     <section id="inicio" class="hero" aria-label="Portada principal">
-      <div class="hero__bg" role="img" aria-label="Campus universitario UNT"></div>
+      <div class="hero__bg" role="img" aria-label="Campus UNT"></div>
       <div class="hero__overlay"></div>
-
       <div class="container">
         <div class="hero__content">
           <div class="hero__eyebrow">
             <span class="hero__eyebrow-dot"></span>
             Desde 1824 · Trujillo, Perú
           </div>
-
           <h1 class="hero__title">
-            Formamos <span class="accent">Economistas</span><br />
-            que Transforman<br />el Futuro
+            Formamos <span class="accent">Economistas</span><br/>
+            que Transforman<br/>el Futuro
           </h1>
-
           <p class="hero__subtitle">
             La Escuela de Economía de la UNT forma profesionales con sólida base
             analítica, visión crítica y compromiso con el desarrollo del país.
           </p>
-
           <div class="hero__cta">
-            <a href="#programas" class="btn btn-accent" id="hero-cta-programas">
-              <i class="fa-solid fa-graduation-cap"></i>
-              Ver Programas
+            <a href="programas.html" class="btn btn-accent" id="hero-cta-programas">
+              <i class="fa-solid fa-graduation-cap"></i> Ver Programas
             </a>
-            <a href="#acerca" class="btn btn-outline" id="hero-cta-nosotros" style="border-color:rgba(255,255,255,0.6); color:#fff;">
-              <i class="fa-solid fa-circle-info"></i>
-              Conoce más
+            <a href="nosotros.html" class="btn btn-outline" id="hero-cta-nosotros" style="border-color:rgba(255,255,255,0.6);color:#fff;">
+              <i class="fa-solid fa-circle-info"></i> Conoce más
             </a>
           </div>
         </div>
       </div>
-
       <div class="hero__scroll-hint" aria-hidden="true">
-        <div class="hero__scroll-arrow">
-          <i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i>
-        </div>
+        <div class="hero__scroll-arrow"><i class="fa-solid fa-chevron-down" style="font-size:0.75rem;"></i></div>
         <span>Desplázate</span>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         ESTADÍSTICAS
-    ══════════════════════════════════════════ -->
-    <section class="stats" aria-label="Estadísticas de la escuela">
+    <!-- ══ ESTADÍSTICAS ══ -->
+    <section class="stats" aria-label="Estadísticas">
       <div class="container">
         <div class="stats__grid">
-
           <div class="stat-card reveal">
             <div class="stat-card__icon">🎓</div>
-            <div class="stat-card__number">
-              <span data-counter="3500">0</span>
-              <span class="suffix">+</span>
-            </div>
+            <div class="stat-card__number"><span data-counter="3500">0</span><span class="suffix">+</span></div>
             <div class="stat-card__label">Egresados</div>
           </div>
-
           <div class="stat-card reveal reveal-delay-1">
             <div class="stat-card__icon">📅</div>
-            <div class="stat-card__number">
-              <span data-counter="65">0</span>
-              <span class="suffix">años</span>
-            </div>
+            <div class="stat-card__number"><span data-counter="65">0</span><span class="suffix">años</span></div>
             <div class="stat-card__label">De trayectoria</div>
           </div>
-
           <div class="stat-card reveal reveal-delay-2">
             <div class="stat-card__icon">👨‍🏫</div>
-            <div class="stat-card__number">
-              <span data-counter="48">0</span>
-              <span class="suffix"></span>
-            </div>
+            <div class="stat-card__number"><span data-counter="48">0</span></div>
             <div class="stat-card__label">Docentes</div>
           </div>
-
           <div class="stat-card reveal reveal-delay-3">
             <div class="stat-card__icon">🔬</div>
-            <div class="stat-card__number">
-              <span data-counter="120">0</span>
-              <span class="suffix">+</span>
-            </div>
+            <div class="stat-card__number"><span data-counter="120">0</span><span class="suffix">+</span></div>
             <div class="stat-card__label">Publicaciones</div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-         ACERCA DE
-    ══════════════════════════════════════════ -->
-    <section id="acerca" class="section" aria-labelledby="acerca-title">
-      <div class="container">
-        <div class="about__grid">
-
-          <div class="about__image-wrap reveal">
-            <img
-              src="assets/images/hero_campus.jpg"
-              alt="Campus de la Universidad Nacional de Trujillo"
-              class="about__image"
-              loading="lazy"
-            />
-            <div class="about__image-badge">
-              <strong>1824</strong>
-              <span>Fundación UNT</span>
-            </div>
-          </div>
-
-          <div class="about__content reveal reveal-delay-2">
-            <div class="section-header" style="text-align:left; margin-bottom:var(--space-8);">
-              <div class="section-label">Nuestra Escuela</div>
-              <h2 id="acerca-title" class="section-title">
-                Una tradición de <span>excelencia</span> académica
-              </h2>
-            </div>
-
-            <p class="about__text">
-              La Escuela Académico Profesional de Economía de la Universidad Nacional de Trujillo
-              es una de las instituciones académicas más reconocidas del norte del Perú. Formamos
-              economistas con sólida preparación teórica y práctica, capaces de contribuir al
-              análisis y solución de los grandes problemas económicos del país.
-            </p>
-
-            <div class="about__pillars">
-              <div class="pillar-card">
-                <div class="pillar-card__icon">🎯</div>
-                <div class="pillar-card__title">Misión</div>
-                <div class="pillar-card__desc">Formar economistas competentes, críticos y comprometidos con el desarrollo sostenible.</div>
-              </div>
-              <div class="pillar-card">
-                <div class="pillar-card__icon">🔭</div>
-                <div class="pillar-card__title">Visión</div>
-                <div class="pillar-card__desc">Ser la escuela de economía líder del norte del Perú, reconocida por su calidad académica.</div>
-              </div>
-              <div class="pillar-card">
-                <div class="pillar-card__icon">⚖️</div>
-                <div class="pillar-card__title">Valores</div>
-                <div class="pillar-card__desc">Integridad, excelencia, innovación, responsabilidad social y pensamiento crítico.</div>
-              </div>
-              <div class="pillar-card">
-                <div class="pillar-card__icon">🌎</div>
-                <div class="pillar-card__title">Impacto</div>
-                <div class="pillar-card__desc">Egresados en instituciones públicas, empresas líderes y organismos internacionales.</div>
-              </div>
-            </div>
-
-            <div style="margin-top:var(--space-6);">
-              <a href="#programas" class="btn btn-primary" id="acerca-cta">
-                <i class="fa-solid fa-arrow-right"></i>
-                Ver programas académicos
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- WAVE DIVIDER -->
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--clr-bg-alt)" />
-      </svg>
-    </div>
-
-    <!-- ══════════════════════════════════════════
-         PROGRAMAS ACADÉMICOS
-    ══════════════════════════════════════════ -->
-    <section id="programas" class="section section--alt" aria-labelledby="programas-title">
+    <!-- ══ ACCESOS RÁPIDOS ══ -->
+    <section class="section" aria-label="Accesos rápidos">
       <div class="container">
         <div class="section-header reveal">
-          <div class="section-label">Formación Académica</div>
-          <h2 id="programas-title" class="section-title">Nuestros <span>Programas</span></h2>
-          <p class="section-subtitle">
-            Elige el camino que potenciará tu carrera en el mundo de la economía.
-          </p>
+          <div class="section-label">Explora</div>
+          <h2 class="section-title">¿Qué estás <span>buscando</span>?</h2>
+          <p class="section-subtitle">Navega por las secciones de nuestra escuela.</p>
         </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:var(--space-6);">
 
-        <div class="programs__grid">
+          <a href="nosotros.html" class="pillar-card reveal" id="quick-nosotros" style="text-decoration:none;">
+            <div class="pillar-card__icon">📖</div>
+            <div class="pillar-card__title">Nosotros</div>
+            <div class="pillar-card__desc">Misión, visión, historia y valores de nuestra escuela.</div>
+          </a>
 
-          <div class="program-card reveal">
-            <div class="program-card__bg" style="background-image: url('assets/images/hero_campus.jpg'); background-position: left center;"></div>
-            <div class="program-card__overlay"></div>
-            <div class="program-card__content">
-              <span class="program-card__badge">Pregrado</span>
-              <h3 class="program-card__title">Licenciatura en Economía</h3>
-              <p class="program-card__desc">
-                Programa de 5 años con sólida formación en teoría económica, econometría,
-                políticas públicas y gestión empresarial.
-              </p>
-              <a href="#contacto" class="program-card__link" id="prog-licenciatura">
-                Más información <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+          <a href="programas.html" class="pillar-card reveal reveal-delay-1" id="quick-programas" style="text-decoration:none;">
+            <div class="pillar-card__icon">🎓</div>
+            <div class="pillar-card__title">Programas Académicos</div>
+            <div class="pillar-card__desc">Licenciatura, Maestría y Doctorado en Economía.</div>
+          </a>
 
-          <div class="program-card reveal reveal-delay-2">
-            <div class="program-card__bg" style="background-image: url('assets/images/hero_campus.jpg'); background-position: center;"></div>
-            <div class="program-card__overlay"></div>
-            <div class="program-card__content">
-              <span class="program-card__badge">Posgrado</span>
-              <h3 class="program-card__title">Maestría en Economía</h3>
-              <p class="program-card__desc">
-                Profundización en economía aplicada, investigación cuantitativa
-                y políticas de desarrollo regional y nacional.
-              </p>
-              <a href="#contacto" class="program-card__link" id="prog-maestria">
-                Más información <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+          <a href="noticias.html" class="pillar-card reveal reveal-delay-2" id="quick-noticias" style="text-decoration:none;">
+            <div class="pillar-card__icon">📰</div>
+            <div class="pillar-card__title">Noticias y Eventos</div>
+            <div class="pillar-card__desc">Entérate de lo último que sucede en la escuela.</div>
+          </a>
 
-          <div class="program-card reveal reveal-delay-3">
-            <div class="program-card__bg" style="background-image: url('assets/images/hero_campus.jpg'); background-position: right center;"></div>
-            <div class="program-card__overlay"></div>
-            <div class="program-card__content">
-              <span class="program-card__badge">Doctorado</span>
-              <h3 class="program-card__title">Doctorado en Ciencias Económicas</h3>
-              <p class="program-card__desc">
-                Formación de alto nivel para investigadores y académicos con impacto
-                en la frontera del conocimiento económico.
-              </p>
-              <a href="#contacto" class="program-card__link" id="prog-doctorado">
-                Más información <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+          <a href="investigacion.html" class="pillar-card reveal reveal-delay-3" id="quick-investigacion" style="text-decoration:none;">
+            <div class="pillar-card__icon">🔬</div>
+            <div class="pillar-card__title">Investigación</div>
+            <div class="pillar-card__desc">Líneas de investigación y publicaciones académicas.</div>
+          </a>
+
+          <a href="docentes.html" class="pillar-card reveal reveal-delay-1" id="quick-docentes" style="text-decoration:none;">
+            <div class="pillar-card__icon">👨‍🏫</div>
+            <div class="pillar-card__title">Plana Docente</div>
+            <div class="pillar-card__desc">Conoce a nuestros docentes y su especialidad.</div>
+          </a>
+
+          <a href="egresados.html" class="pillar-card reveal reveal-delay-2" id="quick-egresados" style="text-decoration:none;">
+            <div class="pillar-card__icon">💼</div>
+            <div class="pillar-card__title">Egresados</div>
+            <div class="pillar-card__desc">Bolsa de trabajo y red de alumni de la escuela.</div>
+          </a>
+
+          <a href="contacto.html" class="pillar-card reveal reveal-delay-3" id="quick-contacto" style="text-decoration:none;">
+            <div class="pillar-card__icon">📍</div>
+            <div class="pillar-card__title">Contacto</div>
+            <div class="pillar-card__desc">Escríbenos o encuéntranos en el campus.</div>
+          </a>
 
         </div>
       </div>
     </section>
 
-    <!-- WAVE DIVIDER -->
-    <div class="wave-divider" aria-hidden="true">
-      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,0 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--clr-bg)" />
-      </svg>
-    </div>
-
-    <!-- ══════════════════════════════════════════
-         NOTICIAS Y EVENTOS
-    ══════════════════════════════════════════ -->
-    <section id="noticias" class="section" aria-labelledby="noticias-title">
+    <!-- ══ NOTICIAS DESTACADAS ══ -->
+    <section class="section section--alt" aria-label="Últimas noticias">
       <div class="container">
         <div class="section-header reveal">
           <div class="section-label">Actualidad</div>
-          <h2 id="noticias-title" class="section-title">Noticias y <span>Eventos</span></h2>
-          <p class="section-subtitle">Mantente al día con lo que sucede en nuestra escuela.</p>
+          <h2 class="section-title">Últimas <span>Noticias</span></h2>
         </div>
-
-        <div class="news__layout">
-
-          <!-- Noticia principal -->
-          <div class="news__main-card reveal">
-            <img
-              src="assets/images/hero_campus.jpg"
-              alt="I Jornada de Investigación en Economía"
-              class="news__main-img"
-              loading="lazy"
-            />
-            <div class="news__main-overlay"></div>
-            <div class="news__main-content">
-              <div class="news__main-meta">
-                <span class="badge badge--dark">Investigación</span>
-                <span style="color:rgba(255,255,255,0.65); font-size:var(--text-sm);">
-                  <i class="fa-regular fa-calendar"></i> 7 de julio, 2025
-                </span>
-              </div>
-              <h3 class="news__main-title">
-                I Jornada de Investigación en Economía — Ciudad Universitaria
-              </h3>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:var(--space-6);">
+          <article class="news-item reveal" style="flex-direction:column;">
+            <img src="assets/images/hero_campus.jpg" alt="Jornada de Investigación" class="news-item__img" style="width:100%;height:180px;" loading="lazy" />
+            <div class="news-item__content" style="padding:var(--space-4);">
+              <div class="news-item__meta"><span class="badge badge--primary">Investigación</span><span class="news-item__date">07 Jul 2025</span></div>
+              <h3 class="news-item__title">I Jornada de Investigación en Economía — Ciudad Universitaria</h3>
             </div>
-          </div>
-
-          <!-- Lista de noticias -->
-          <div class="news__list reveal reveal-delay-2">
-
-            <article class="news-item">
-              <img src="assets/images/hero_campus.jpg" alt="Acreditación" class="news-item__img" loading="lazy" />
-              <div class="news-item__content">
-                <div class="news-item__meta">
-                  <span class="badge badge--primary">Acreditación</span>
-                  <span class="news-item__date">15 Jun 2025</span>
-                </div>
-                <h4 class="news-item__title">La Escuela inicia proceso de acreditación SINEACE 2025–2028</h4>
-              </div>
-            </article>
-
-            <article class="news-item">
-              <img src="assets/images/hero_campus.jpg" alt="Convenio" class="news-item__img" loading="lazy" />
-              <div class="news-item__content">
-                <div class="news-item__meta">
-                  <span class="badge badge--primary">Convenios</span>
-                  <span class="news-item__date">02 Jun 2025</span>
-                </div>
-                <h4 class="news-item__title">Nuevo convenio de cooperación académica con universidades de Chile</h4>
-              </div>
-            </article>
-
-            <article class="news-item">
-              <img src="assets/images/hero_campus.jpg" alt="Conferencia" class="news-item__img" loading="lazy" />
-              <div class="news-item__content">
-                <div class="news-item__meta">
-                  <span class="badge badge--accent">Evento</span>
-                  <span class="news-item__date">20 May 2025</span>
-                </div>
-                <h4 class="news-item__title">Conferencia internacional: Economía Circular y Desarrollo Sostenible en el Perú</h4>
-              </div>
-            </article>
-
-            <article class="news-item">
-              <img src="assets/images/hero_campus.jpg" alt="Egresados" class="news-item__img" loading="lazy" />
-              <div class="news-item__content">
-                <div class="news-item__meta">
-                  <span class="badge badge--primary">Egresados</span>
-                  <span class="news-item__date">08 May 2025</span>
-                </div>
-                <h4 class="news-item__title">Ceremonia de graduación: 112 nuevos economistas al servicio del Perú</h4>
-              </div>
-            </article>
-
-          </div>
+          </article>
+          <article class="news-item reveal reveal-delay-1" style="flex-direction:column;">
+            <img src="assets/images/hero_campus.jpg" alt="Acreditación" class="news-item__img" style="width:100%;height:180px;" loading="lazy" />
+            <div class="news-item__content" style="padding:var(--space-4);">
+              <div class="news-item__meta"><span class="badge badge--primary">Acreditación</span><span class="news-item__date">15 Jun 2025</span></div>
+              <h3 class="news-item__title">La Escuela inicia proceso de acreditación SINEACE 2025–2028</h3>
+            </div>
+          </article>
+          <article class="news-item reveal reveal-delay-2" style="flex-direction:column;">
+            <img src="assets/images/hero_campus.jpg" alt="Convenio" class="news-item__img" style="width:100%;height:180px;" loading="lazy" />
+            <div class="news-item__content" style="padding:var(--space-4);">
+              <div class="news-item__meta"><span class="badge badge--accent">Convenio</span><span class="news-item__date">02 Jun 2025</span></div>
+              <h3 class="news-item__title">Nuevo convenio de cooperación académica con universidades de Chile</h3>
+            </div>
+          </article>
         </div>
-
-        <div class="news__more reveal">
-          <a href="#" class="btn btn-outline" id="btn-ver-noticias">
-            <i class="fa-solid fa-newspaper"></i>
-            Ver todas las noticias
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         INVESTIGACIÓN
-    ══════════════════════════════════════════ -->
-    <section id="investigacion" class="section section--alt" aria-labelledby="investigacion-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Ciencia y Conocimiento</div>
-          <h2 id="investigacion-title" class="section-title">Investigación y <span>Publicaciones</span></h2>
-          <p class="section-subtitle">
-            Generamos conocimiento para entender y transformar la realidad económica del Perú.
-          </p>
-        </div>
-
-        <div class="research__grid">
-
-          <div class="research-card reveal">
-            <div class="research-card__icon">📊</div>
-            <h3 class="research-card__title">Economía Regional</h3>
-            <p class="research-card__desc">
-              Análisis del desarrollo económico de La Libertad y el norte peruano,
-              con énfasis en agro-exportaciones, minería y manufactura.
-            </p>
-            <a href="#" class="research-card__link" id="inv-regional">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="research-card reveal reveal-delay-1">
-            <div class="research-card__icon">💹</div>
-            <h3 class="research-card__title">Macroeconomía y Políticas Públicas</h3>
-            <p class="research-card__desc">
-              Estudio de la política fiscal, monetaria y social en el Perú,
-              con modelos econométricos y evidencia empírica.
-            </p>
-            <a href="#" class="research-card__link" id="inv-macro">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="research-card reveal reveal-delay-2">
-            <div class="research-card__icon">🌿</div>
-            <h3 class="research-card__title">Economía Ambiental y Sostenibilidad</h3>
-            <p class="research-card__desc">
-              Valoración económica de los recursos naturales, cambio climático
-              e impacto ambiental de las actividades productivas.
-            </p>
-            <a href="#" class="research-card__link" id="inv-ambiental">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="research-card reveal reveal-delay-1">
-            <div class="research-card__icon">🏘️</div>
-            <h3 class="research-card__title">Economía Social y Pobreza</h3>
-            <p class="research-card__desc">
-              Investigación sobre desigualdad, pobreza multidimensional y
-              efectividad de los programas sociales en el Perú.
-            </p>
-            <a href="#" class="research-card__link" id="inv-social">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="research-card reveal reveal-delay-2">
-            <div class="research-card__icon">🤖</div>
-            <h3 class="research-card__title">Economía Digital y Fintech</h3>
-            <p class="research-card__desc">
-              Impacto de la transformación digital, criptomonedas, e-commerce
-              y plataformas digitales en la economía peruana.
-            </p>
-            <a href="#" class="research-card__link" id="inv-digital">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div class="research-card reveal reveal-delay-3">
-            <div class="research-card__icon">🌐</div>
-            <h3 class="research-card__title">Comercio Internacional</h3>
-            <p class="research-card__desc">
-              Análisis de los TLCs, balanza comercial, competitividad exportadora
-              y cadenas globales de valor en el contexto peruano.
-            </p>
-            <a href="#" class="research-card__link" id="inv-comercio">
-              Explorar línea <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         DOCENTES
-    ══════════════════════════════════════════ -->
-    <section id="docentes" class="section" aria-labelledby="docentes-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Nuestro Equipo</div>
-          <h2 id="docentes-title" class="section-title">Plana <span>Docente</span></h2>
-          <p class="section-subtitle">
-            Profesionales con experiencia en investigación, sector público y empresa privada.
-          </p>
-        </div>
-
-        <div class="faculty__grid">
-
-          <div class="faculty-card reveal">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Carlos Méndez" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn Dr. Méndez" id="doc1-linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email Dr. Méndez" id="doc1-email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Carlos Méndez Torres</div>
-              <div class="faculty-card__role">Director de Escuela</div>
-              <div class="faculty-card__specialty">Macroeconomía · Política Fiscal</div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal reveal-delay-1">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dra. Ana Ríos" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn Dra. Ríos" id="doc2-linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email Dra. Ríos" id="doc2-email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dra. Ana Ríos Villanueva</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty">Econometría · Economía Regional</div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal reveal-delay-2">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Mg. Luis Paredes" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn Mg. Paredes" id="doc3-linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email Mg. Paredes" id="doc3-email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Mg. Luis Paredes Castro</div>
-              <div class="faculty-card__role">Docente Asociado</div>
-              <div class="faculty-card__specialty">Finanzas · Mercado de Capitales</div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal reveal-delay-3">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dra. María Gutiérrez" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn Dra. Gutiérrez" id="doc4-linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email Dra. Gutiérrez" id="doc4-email"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dra. María Gutiérrez Sánchez</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty">Economía Ambiental · Sostenibilidad</div>
-            </div>
-          </div>
-
-        </div>
-
-        <div style="text-align:center; margin-top:var(--space-12);" class="reveal">
-          <a href="#" class="btn btn-outline" id="btn-ver-docentes">
-            <i class="fa-solid fa-users"></i>
-            Ver toda la plana docente
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         EGRESADOS / BOLSA DE TRABAJO
-    ══════════════════════════════════════════ -->
-    <section id="egresados" class="section alumni" aria-labelledby="egresados-title">
-      <div class="container">
-        <div class="alumni__grid">
-
-          <div class="alumni__content reveal">
-            <div class="section-header" style="text-align:left; margin-bottom:var(--space-8);">
-              <div class="section-label">Red Alumni</div>
-              <h2 id="egresados-title" class="section-title">Egresados y <span>Bolsa de Trabajo</span></h2>
-              <p class="section-subtitle" style="margin:0; text-align:left;">
-                Conectamos a nuestros egresados con oportunidades laborales en el sector público, privado e internacional.
-              </p>
-            </div>
-
-            <div class="job-list">
-
-              <div class="job-card">
-                <div class="job-card__left">
-                  <div class="job-card__title">Analista Económico</div>
-                  <div class="job-card__company">📍 Banco Central de Reserva del Perú</div>
-                </div>
-                <div class="job-card__right">
-                  <span class="job-card__type">Tiempo completo</span>
-                </div>
-              </div>
-
-              <div class="job-card">
-                <div class="job-card__left">
-                  <div class="job-card__title">Consultor en Políticas Públicas</div>
-                  <div class="job-card__company">📍 Ministerio de Economía y Finanzas</div>
-                </div>
-                <div class="job-card__right">
-                  <span class="job-card__type">Contrato</span>
-                </div>
-              </div>
-
-              <div class="job-card">
-                <div class="job-card__left">
-                  <div class="job-card__title">Economista Junior — Proyectos</div>
-                  <div class="job-card__company">📍 Municipalidad Provincial de Trujillo</div>
-                </div>
-                <div class="job-card__right">
-                  <span class="job-card__type">CAS</span>
-                </div>
-              </div>
-
-            </div>
-
-            <div style="margin-top:var(--space-6);">
-              <a href="#" class="btn btn-primary" id="btn-bolsa-trabajo">
-                <i class="fa-solid fa-briefcase"></i>
-                Ver todas las vacantes
-              </a>
-            </div>
-          </div>
-
-          <div class="alumni__visual reveal reveal-delay-2">
-            <div class="alumni__numbers">
-              <div class="alumni-stat">
-                <div class="alumni-stat__number">85%</div>
-                <div class="alumni-stat__label">Empleabilidad al año de egreso</div>
-              </div>
-              <div class="alumni-stat">
-                <div class="alumni-stat__number">+40</div>
-                <div class="alumni-stat__label">Empresas aliadas</div>
-              </div>
-              <div class="alumni-stat">
-                <div class="alumni-stat__number">12</div>
-                <div class="alumni-stat__label">Convenios vigentes</div>
-              </div>
-              <div class="alumni-stat">
-                <div class="alumni-stat__number">8</div>
-                <div class="alumni-stat__label">Países con egresados</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         CONTACTO
-    ══════════════════════════════════════════ -->
-    <section id="contacto" class="section" aria-labelledby="contacto-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Escríbenos</div>
-          <h2 id="contacto-title" class="section-title">¿Tienes <span>Preguntas</span>?</h2>
-          <p class="section-subtitle">Estamos aquí para orientarte. Contáctanos.</p>
-        </div>
-
-        <div class="contact__grid">
-
-          <!-- Formulario -->
-          <div class="reveal">
-            <form id="contact-form" class="contact-form" novalidate>
-              <div class="form-group">
-                <label for="contact-name">Nombre completo</label>
-                <input type="text" id="contact-name" name="name" placeholder="Tu nombre" required />
-              </div>
-              <div class="form-group">
-                <label for="contact-email">Correo electrónico</label>
-                <input type="email" id="contact-email" name="email" placeholder="correo@ejemplo.com" required />
-              </div>
-              <div class="form-group">
-                <label for="contact-subject">Asunto</label>
-                <select id="contact-subject" name="subject">
-                  <option value="">Seleccionar asunto...</option>
-                  <option value="admision">Admisión</option>
-                  <option value="programas">Programas académicos</option>
-                  <option value="investigacion">Investigación</option>
-                  <option value="egresados">Egresados / Bolsa de trabajo</option>
-                  <option value="otro">Otro</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="contact-message">Mensaje</label>
-                <textarea id="contact-message" name="message" placeholder="¿En qué podemos ayudarte?" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" id="contact-submit" style="width:100%; justify-content:center;">
-                <i class="fa-solid fa-paper-plane"></i>
-                Enviar mensaje
-              </button>
-            </form>
-          </div>
-
-          <!-- Info y mapa -->
-          <div class="contact-info reveal reveal-delay-2">
-            <div class="contact-info__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.761834870339!2d-79.04455!3d-8.10956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d8a5c1d18bf%3A0x8b88e8e8e8e8e8e8!2sUniversidad%20Nacional%20de%20Trujillo!5e0!3m2!1ses!2spe!4v1234567890"
-                title="Mapa Universidad Nacional de Trujillo"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-
-            <div style="display:flex; flex-direction:column; gap:var(--space-5);">
-              <div class="contact-detail">
-                <div class="contact-detail__icon"><i class="fa-solid fa-location-dot"></i></div>
-                <div>
-                  <div class="contact-detail__label">Dirección</div>
-                  <div class="contact-detail__value">Av. Juan Pablo II s/n — Ciudad Universitaria, Trujillo, Perú</div>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail__icon"><i class="fa-solid fa-phone"></i></div>
-                <div>
-                  <div class="contact-detail__label">Teléfono</div>
-                  <div class="contact-detail__value">(044) 20-2578</div>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail__icon"><i class="fa-solid fa-envelope"></i></div>
-                <div>
-                  <div class="contact-detail__label">Correo</div>
-                  <div class="contact-detail__value">economia@unitru.edu.pe</div>
-                </div>
-              </div>
-
-              <div class="contact-detail">
-                <div class="contact-detail__icon"><i class="fa-solid fa-clock"></i></div>
-                <div>
-                  <div class="contact-detail__label">Horario de atención</div>
-                  <div class="contact-detail__value">Lun – Vie: 8:00 AM – 6:00 PM</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div style="text-align:center;margin-top:var(--space-10);" class="reveal">
+          <a href="noticias.html" class="btn btn-outline" id="home-ver-noticias"><i class="fa-solid fa-newspaper"></i> Ver todas las noticias</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ══════════════════════════════════════════
-       FOOTER
-  ══════════════════════════════════════════ -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer__grid">
+  <div id="footer-container"></div>
 
-        <!-- Marca -->
-        <div class="footer__brand">
-          <div class="footer__logo-wrap">
-            <img src="assets/logo/logo_unt.png" alt="Escudo UNT" class="footer__logo" />
-            <div>
-              <div class="footer__brand-name">Escuela de Economía</div>
-              <div class="footer__brand-sub">Universidad Nacional de Trujillo</div>
-            </div>
-          </div>
-          <p class="footer__desc">
-            Formamos economistas con excelencia académica, visión crítica y
-            compromiso con el desarrollo sostenible del norte del Perú.
-          </p>
-          <div class="footer__social">
-            <a href="#" class="footer__social-btn" aria-label="Facebook" id="footer-facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="footer__social-btn" aria-label="Instagram" id="footer-instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="footer__social-btn" aria-label="YouTube" id="footer-youtube"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="footer__social-btn" aria-label="LinkedIn" id="footer-linkedin"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-
-        <!-- Links rápidos -->
-        <div>
-          <div class="footer__col-title">Escuela</div>
-          <div class="footer__links">
-            <a href="#acerca"       class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Nosotros</a>
-            <a href="#programas"    class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Programas</a>
-            <a href="#investigacion"class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Investigación</a>
-            <a href="#docentes"     class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Docentes</a>
-          </div>
-        </div>
-
-        <!-- Servicios -->
-        <div>
-          <div class="footer__col-title">Servicios</div>
-          <div class="footer__links">
-            <a href="#egresados" class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Bolsa de Trabajo</a>
-            <a href="#noticias"  class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Noticias</a>
-            <a href="#"          class="footer__link" id="footer-biblioteca"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Biblioteca Virtual</a>
-            <a href="#"          class="footer__link" id="footer-intranet"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Intranet</a>
-          </div>
-        </div>
-
-        <!-- Contacto rápido -->
-        <div>
-          <div class="footer__col-title">Contacto</div>
-          <div class="footer__links">
-            <a href="tel:044202578"               class="footer__link"><i class="fa-solid fa-phone" style="font-size:0.7rem;"></i> (044) 20-2578</a>
-            <a href="mailto:economia@unitru.edu.pe" class="footer__link"><i class="fa-solid fa-envelope" style="font-size:0.7rem;"></i> economia@unitru.edu.pe</a>
-            <a href="#contacto"                   class="footer__link"><i class="fa-solid fa-location-dot" style="font-size:0.7rem;"></i> Ciudad Universitaria, Trujillo</a>
-            <a href="https://www.unitru.edu.pe" target="_blank" rel="noopener" class="footer__link"><i class="fa-solid fa-globe" style="font-size:0.7rem;"></i> www.unitru.edu.pe</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="footer__bottom">
-        <div class="footer__copy">
-          © 2025 <span>Escuela de Economía — UNT</span>. Todos los derechos reservados.
-        </div>
-        <div class="footer__legal">
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos de uso</a>
-          <a href="#">Accesibilidad</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Botón volver arriba -->
-  <button id="back-to-top" aria-label="Volver al inicio" title="Volver al inicio">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
-
-  <!-- Scripts -->
+  <script src="js/components.js"></script>
   <script src="js/navbar.js" defer></script>
   <script src="js/animations.js" defer></script>
-
 </body>
 </html>

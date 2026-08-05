@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Plana docente de la Escuela de Economía UNT — profesores con trayectoria en investigación, sector público y empresa privada." />
+  <title>Docentes — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <script src="js/theme-toggle.js"></script>
+  <style>
+    #back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--gradient-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(16px);transition:all var(--transition-base);z-index:900;border:none;}
+    #back-to-top.visible{opacity:1;transform:translateY(0);}
+    #back-to-top:hover{transform:translateY(-4px);}
+    @keyframes bounceBtn{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(20deg)}100%{transform:scale(1) rotate(0deg)}}
+    .bounce-anim{animation:bounceBtn 0.4s ease;}
+    .faculty__grid--large { grid-template-columns: repeat(4,1fr); }
+    @media(max-width:1024px){ .faculty__grid--large{ grid-template-columns:repeat(3,1fr); } }
+    @media(max-width:640px){ .faculty__grid--large{ grid-template-columns:repeat(2,1fr); } }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <div class="page-hero" aria-label="Plana Docente">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Docentes</span>
+          </nav>
+          <h1 class="page-hero__title">Plana <span>Docente</span></h1>
+          <p class="page-hero__subtitle">Profesionales con experiencia en investigación, sector público y empresa privada.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Docentes principales -->
+    <section class="section" aria-labelledby="doc-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Nuestro Equipo</div>
+          <h2 id="doc-title" class="section-title">Docentes <span>Principales</span></h2>
+        </div>
+
+        <div class="faculty__grid faculty__grid--large">
+
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Dr. Carlos Méndez Torres" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d1-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d1-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Carlos Méndez Torres</div>
+              <div class="faculty-card__role">Director de Escuela</div>
+              <div class="faculty-card__specialty">Macroeconomía · Política Fiscal · BCRP</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Dra. Ana Ríos Villanueva" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d2-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d2-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dra. Ana Ríos Villanueva</div>
+              <div class="faculty-card__role">Docente Principal</div>
+              <div class="faculty-card__specialty">Econometría · Economía Regional</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Mg. Luis Paredes Castro" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d3-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d3-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Luis Paredes Castro</div>
+              <div class="faculty-card__role">Docente Asociado</div>
+              <div class="faculty-card__specialty">Finanzas · Mercado de Capitales</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Dra. María Gutiérrez Sánchez" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d4-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d4-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dra. María Gutiérrez Sánchez</div>
+              <div class="faculty-card__role">Docente Principal</div>
+              <div class="faculty-card__specialty">Economía Ambiental · Sostenibilidad</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Dr. Jorge Aguilar Pérez" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d5-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d5-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Jorge Aguilar Pérez</div>
+              <div class="faculty-card__role">Docente Principal</div>
+              <div class="faculty-card__specialty">Desarrollo Económico · Pobreza</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Mg. Rosa Castro Flores" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d6-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d6-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Rosa Castro Flores</div>
+              <div class="faculty-card__role">Docente Asociada</div>
+              <div class="faculty-card__specialty">Microeconomía · Organización Industrial</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Mg. Marco Saavedra López" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d7-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d7-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Marco Saavedra López</div>
+              <div class="faculty-card__role">Docente Auxiliar</div>
+              <div class="faculty-card__specialty">Economía Internacional · Tipo de Cambio</div>
+            </div>
+          </div>
+
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Dra. Karen Torres Mendoza" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d8-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d8-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dra. Karen Torres Mendoza</div>
+              <div class="faculty-card__role">Docente Principal</div>
+              <div class="faculty-card__specialty">Fintech · Economía Digital</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
