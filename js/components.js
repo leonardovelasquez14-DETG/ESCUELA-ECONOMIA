@@ -1,4 +1,4 @@
-/* =============================================
+﻿/* =============================================
    COMPONENTS.JS — Navbar + Footer compartidos
    Escuela de Economía, UNT
    Inyecta el navbar y footer en todas las páginas
@@ -51,16 +51,9 @@
 
           <div class="navbar__actions">
             <button
-              id="theme-toggle-btn"
-              class="theme-toggle"
-              aria-label="Cambiar tema"
-              title="Cambiar tema"
-            >🌙</button>
-
-            <button
               id="navbar-hamburger"
               class="navbar__hamburger"
-              aria-label="Abrir menú"
+              aria-label="Abrir menu"
               aria-expanded="false"
               aria-controls="navbar-mobile"
             >
@@ -163,24 +156,7 @@
     if (navContainer)    navContainer.innerHTML    = NAVBAR_HTML;
     if (footerContainer) footerContainer.innerHTML = FOOTER_HTML;
 
-    // Re-activar el toggle de tema (ya que se inyectó el botón)
-    const themeBtn = document.getElementById('theme-toggle-btn');
-    if (themeBtn) {
-      const stored = localStorage.getItem('unt-econ-theme');
-      const theme  = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      themeBtn.innerHTML = theme === 'dark' ? '☀️' : '🌙';
-
-      themeBtn.addEventListener('click', () => {
-        const current = document.documentElement.getAttribute('data-theme') || 'light';
-        const next    = current === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('unt-econ-theme', next);
-        themeBtn.innerHTML = next === 'dark' ? '☀️' : '🌙';
-        themeBtn.classList.remove('bounce-anim');
-        void themeBtn.offsetWidth;
-        themeBtn.classList.add('bounce-anim');
-      });
-    }
+    
   }
 
   /* Ejecutar cuando el DOM esté listo */
@@ -191,3 +167,5 @@
   }
 
 })();
+
+

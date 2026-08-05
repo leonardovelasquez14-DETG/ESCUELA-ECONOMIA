@@ -282,27 +282,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Toggle de tema */
-.theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--radius-md);
-  background: var(--clr-bg-alt);
-  border: 1px solid var(--clr-border);
-  color: var(--clr-text-secondary);
-  transition: all var(--transition-base);
-  font-size: 1.1rem;
-}
-
-.theme-toggle:hover {
-  background: rgba(200,16,46,0.1);
-  color: var(--clr-primary);
-  border-color: var(--clr-primary);
-  transform: rotate(15deg);
-}
 
 /* Hamburger */
 .navbar__hamburger {
