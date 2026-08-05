@@ -1,0 +1,89 @@
+/* =============================================
+   VARIABLES CSS — Sistema de Diseño UNT Economía
+   Identidad institucional: Rojo #C8102E · Dorado #D4AF37
+   ============================================= */
+
+:root {
+  /* ── Colores Institucionales ── */
+  --clr-primary:        #C8102E;
+  --clr-primary-dark:   #9B0B21;
+  --clr-primary-light:  #e8304e;
+  --clr-accent:         #D4AF37;
+  --clr-accent-dark:    #A8892A;
+  --clr-accent-light:   #F0CA50;
+
+  /* ── Fondo y Superficie (Light Mode por defecto) ── */
+  --clr-bg:             #F8F5F0;
+  --clr-bg-alt:         #F2EDE8;
+  --clr-surface:        #FFFFFF;
+  --clr-surface-2:      #FDF9F5;
+  --clr-border:         rgba(200, 16, 46, 0.12);
+
+  /* ── Texto ── */
+  --clr-text:           #1a0a0d;
+  --clr-text-secondary: #4a3038;
+  --clr-text-muted:     #7a5560;
+  --clr-text-inverse:   #FFFFFF;
+
+  /* ── Gradientes ── */
+  --gradient-primary:   linear-gradient(135deg, #9B0B21 0%, #C8102E 50%, #e8304e 100%);
+  --gradient-accent:    linear-gradient(135deg, #A8892A 0%, #D4AF37 50%, #F0CA50 100%);
+  --gradient-hero:      linear-gradient(135deg, rgba(155,11,33,0.88) 0%, rgba(26,10,13,0.65) 60%, rgba(212,175,55,0.25) 100%);
+  --gradient-card:      linear-gradient(180deg, transparent 50%, rgba(155,11,33,0.85) 100%);
+
+  /* ── Tipografía ── */
+  --font-display:       'Playfair Display', Georgia, serif;
+  --font-body:          'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Escala Tipográfica ── */
+  --text-xs:    0.75rem;    /* 12px */
+  --text-sm:    0.875rem;   /* 14px */
+  --text-base:  1rem;       /* 16px */
+  --text-md:    1.125rem;   /* 18px */
+  --text-lg:    1.25rem;    /* 20px */
+  --text-xl:    1.5rem;     /* 24px */
+  --text-2xl:   2rem;       /* 32px */
+  --text-3xl:   2.5rem;     /* 40px */
+  --text-4xl:   3.5rem;     /* 56px */
+  --text-5xl:   4.5rem;     /* 72px */
+
+  /* ── Espaciado ── */
+  --space-1:    0.25rem;
+  --space-2:    0.5rem;
+  --space-3:    0.75rem;
+  --space-4:    1rem;
+  --space-5:    1.25rem;
+  --space-6:    1.5rem;
+  --space-8:    2rem;
+  --space-10:   2.5rem;
+  --space-12:   3rem;
+  --space-16:   4rem;
+  --space-20:   5rem;
+  --space-24:   6rem;
+  --space-32:   8rem;
+
+  /* ── Bordes Redondeados ── */
+  --radius-sm:  0.375rem;
+  --radius-md:  0.75rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-sm:  0 1px 3px rgba(155,11,33,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 16px rgba(155,11,33,0.12), 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-lg:  0 10px 40px rgba(155,11,33,0.18), 0 4px 16px rgba(0,0,0,0.1);
+  --shadow-xl:  0 20px 60px rgba(155,11,33,0.22), 0 8px 24px rgba(0,0,0,0.12);
+  --shadow-glow: 0 0 30px rgba(200,16,46,0.3);
+
+  /* ── Transiciones ── */
+  --transition-fast:   150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base:   300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow:   500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ── Layout ── */
+  --container-max:  1280px;
+  --container-wide: 1440px;
+  --navbar-h:       72px;
+  --section-py:     var(--space-24);
+}

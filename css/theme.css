@@ -1,0 +1,77 @@
+/* =============================================
+   THEME CSS — Dark / Light Mode
+   UNT Economía
+   ============================================= */
+
+/* ── Light Mode (por defecto) ── */
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --clr-bg:             #F8F5F0;
+  --clr-bg-alt:         #F2EDE8;
+  --clr-surface:        #FFFFFF;
+  --clr-surface-2:      #FDF9F5;
+  --clr-border:         rgba(200, 16, 46, 0.12);
+  --clr-text:           #1a0a0d;
+  --clr-text-secondary: #4a3038;
+  --clr-text-muted:     #7a5560;
+  --clr-navbar-bg:      rgba(255, 255, 255, 0.92);
+  --clr-navbar-border:  rgba(200, 16, 46, 0.15);
+  --clr-footer-bg:      #1a0a0d;
+  --shadow-card:        0 4px 24px rgba(155, 11, 33, 0.08);
+  color-scheme: light;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --clr-bg:             #0d0508;
+  --clr-bg-alt:         #150a0c;
+  --clr-surface:        #1e0d10;
+  --clr-surface-2:      #2a1318;
+  --clr-border:         rgba(200, 16, 46, 0.2);
+  --clr-text:           #F0EBE8;
+  --clr-text-secondary: #c8b5ba;
+  --clr-text-muted:     #9a7880;
+  --clr-navbar-bg:      rgba(13, 5, 8, 0.95);
+  --clr-navbar-border:  rgba(200, 16, 46, 0.25);
+  --clr-footer-bg:      #080305;
+  --shadow-card:        0 4px 24px rgba(0, 0, 0, 0.4);
+  --gradient-hero:      linear-gradient(135deg, rgba(155,11,33,0.92) 0%, rgba(13,5,8,0.75) 60%, rgba(212,175,55,0.2) 100%);
+  color-scheme: dark;
+}
+
+/* ── Detección automática del sistema ── */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --clr-bg:             #0d0508;
+    --clr-bg-alt:         #150a0c;
+    --clr-surface:        #1e0d10;
+    --clr-surface-2:      #2a1318;
+    --clr-border:         rgba(200, 16, 46, 0.2);
+    --clr-text:           #F0EBE8;
+    --clr-text-secondary: #c8b5ba;
+    --clr-text-muted:     #9a7880;
+    --clr-navbar-bg:      rgba(13, 5, 8, 0.95);
+    --clr-navbar-border:  rgba(200, 16, 46, 0.25);
+    --clr-footer-bg:      #080305;
+    --shadow-card:        0 4px 24px rgba(0, 0, 0, 0.4);
+    color-scheme: dark;
+  }
+}
+
+/* ── Transición suave al cambiar tema ── */
+*,
+*::before,
+*::after {
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+/* Excepciones — no animar estas propiedades */
+img,
+video,
+.no-theme-transition {
+  transition: none !important;
+}
