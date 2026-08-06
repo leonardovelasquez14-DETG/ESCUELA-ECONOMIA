@@ -14,7 +14,6 @@
     { href: 'noticias.html',     label: 'Noticias',      icon: '📰' },
     { href: 'investigacion.html',label: 'Investigación', icon: '🔬' },
     { href: 'docentes.html',     label: 'Docentes',      icon: '👨‍🏫' },
-    { href: 'egresados.html',    label: 'Egresados',     icon: '💼' },
     { href: 'contacto.html',     label: 'Contacto',      icon: '📍' },
   ];
 
@@ -111,7 +110,6 @@
           <div>
             <div class="footer__col-title">Servicios</div>
             <div class="footer__links">
-              <a href="egresados.html" class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Bolsa de Trabajo</a>
               <a href="noticias.html"  class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Noticias</a>
               <a href="biblioteca.html" class="footer__link" id="footer-biblioteca"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Biblioteca Virtual</a>
             </div>
@@ -166,6 +164,7 @@
   }
 
 })();
+
 
 
 
