@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biblioteca Virtual de la Escuela de Economía UNT — accede a revistas, repositorios, catálogos y bases de datos académicas." />
+  <title>Biblioteca Virtual — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <style>
+    .bib-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-10);
+    }
+    @media(max-width: 1024px) { .bib-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media(max-width: 640px)  { .bib-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .bib-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8) var(--space-6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+      text-align: center;
+      text-decoration: none;
+      color: var(--clr-text);
+      box-shadow: var(--shadow-card);
+      transition: all var(--transition-base);
+      position: relative;
+      overflow: hidden;
+    }
+    .bib-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--gradient-primary);
+      opacity: 0;
+      transition: opacity var(--transition-base);
+    }
+    .bib-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(200,16,46,0.18);
+      border-color: var(--clr-primary);
+    }
+    .bib-card:hover::before { opacity: 0.04; }
+    .bib-card:hover .bib-card__icon { background: var(--gradient-primary); color: #fff; }
+    .bib-card:hover .bib-card__name { color: var(--clr-primary); }
+
+    .bib-card__icon {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-lg);
+      background: rgba(200,16,46,0.08);
+      color: var(--clr-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      transition: all var(--transition-base);
+      position: relative;
+      z-index: 1;
+    }
+    .bib-card__name {
+      font-size: var(--text-base);
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      transition: color var(--transition-base);
+      position: relative;
+      z-index: 1;
+    }
+    .bib-card__desc {
+      font-size: var(--text-sm);
+      color: var(--clr-text-muted);
+      line-height: 1.5;
+      position: relative;
+      z-index: 1;
+    }
+    .bib-card__arrow {
+      margin-top: auto;
+      font-size: var(--text-sm);
+      color: var(--clr-primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(4px);
+      transition: all var(--transition-base);
+    }
+    .bib-card:hover .bib-card__arrow {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bib-intro {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--clr-text-secondary);
+      font-size: var(--text-base);
+      line-height: 1.7;
+      margin-top: var(--space-4);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <div class="page-hero" aria-label="Biblioteca Virtual">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Biblioteca Virtual</span>
+          </nav>
+          <h1 class="page-hero__title">Biblioteca <span>Virtual</span></h1>
+          <p class="page-hero__subtitle">Accede a revistas, repositorios y bases de datos académicas de clase mundial.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" aria-labelledby="bib-title">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <div class="section-label">Recursos Académicos</div>
+          <h2 id="bib-title" class="section-title">Plataformas <span>Disponibles</span></h2>
+        </div>
+
+        <p class="bib-intro reveal">
+          La Escuela de Economía pone a disposición de sus estudiantes y docentes las siguientes
+          plataformas de acceso libre y con convenio institucional.
+        </p>
+
+        <div class="bib-grid">
+
+          <a href="https://revistas.unitru.edu.pe/" target="_blank" rel="noopener"
+             class="bib-card reveal" id="bib-revistas">
+            <div class="bib-card__icon"><i class="fa-solid fa-newspaper"></i></div>
+            <div class="bib-card__name">Revistas UNT</div>
+            <div class="bib-card__desc">Portal de revistas científicas de la Universidad Nacional de Trujillo.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://repositorio.unitru.edu.pe/home/" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-1" id="bib-repositorio">
+            <div class="bib-card__icon"><i class="fa-solid fa-database"></i></div>
+            <div class="bib-card__name">Repositorio UNT</div>
+            <div class="bib-card__desc">Repositorio institucional con tesis, artículos y producción académica de la UNT.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="http://biblioteca.unitru.edu.pe/" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-2" id="bib-catalogo">
+            <div class="bib-card__icon"><i class="fa-solid fa-book"></i></div>
+            <div class="bib-card__name">Catálogo de Libros</div>
+            <div class="bib-card__desc">Catálogo en línea del fondo bibliográfico de la Biblioteca Central UNT.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://alicia.concytec.gob.pe/vufind/" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-3" id="bib-alicia">
+            <div class="bib-card__icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="bib-card__name">ALICIA</div>
+            <div class="bib-card__desc">Acceso Libre a Información Científica para la Innovación — CONCYTEC Perú.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="http://renati.sunedu.gob.pe/" target="_blank" rel="noopener"
+             class="bib-card reveal" id="bib-renati">
+            <div class="bib-card__icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="bib-card__name">RENATI</div>
+            <div class="bib-card__desc">Registro Nacional de Trabajos de Investigación de SUNEDU.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="http://infotrac.galegroup.com/itweb/unt?db=GVRL-0" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-1" id="bib-libros-digitales">
+            <div class="bib-card__icon"><i class="fa-solid fa-tablet-screen-button"></i></div>
+            <div class="bib-card__name">Libros Digitales</div>
+            <div class="bib-card__desc">Biblioteca digital Gale Virtual Reference Library con acceso para la UNT.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://iopscience.iop.org/" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-2" id="bib-iopscience">
+            <div class="bib-card__icon"><i class="fa-solid fa-atom"></i></div>
+            <div class="bib-card__name">IOPscience</div>
+            <div class="bib-card__desc">Publicaciones del Institute of Physics en ciencias exactas y aplicadas.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://www.sciencedirect.com/" target="_blank" rel="noopener"
+             class="bib-card reveal reveal-delay-3" id="bib-sciencedirect">
+            <div class="bib-card__icon"><i class="fa-solid fa-flask"></i></div>
+            <div class="bib-card__name">ScienceDirect</div>
+            <div class="bib-card__desc">Base de datos Elsevier con miles de revistas y artículos científicos indexados.</div>
+            <div class="bib-card__arrow">Acceder <i class="fa-solid fa-arrow-right"></i></div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
