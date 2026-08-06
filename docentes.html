@@ -15,8 +15,6 @@
     #back-to-top{position:fixed;bottom:2rem;right:2rem;width:48px;height:48px;border-radius:50%;background:var(--gradient-primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:var(--shadow-lg);cursor:pointer;opacity:0;transform:translateY(16px);transition:all var(--transition-base);z-index:900;border:none;}
     #back-to-top.visible{opacity:1;transform:translateY(0);}
     #back-to-top:hover{transform:translateY(-4px);}
-    @keyframes bounceBtn{0%{transform:scale(1)}40%{transform:scale(1.25) rotate(20deg)}100%{transform:scale(1) rotate(0deg)}}
-    .bounce-anim{animation:bounceBtn 0.4s ease;}
     .faculty__grid--large { grid-template-columns: repeat(4,1fr); }
     @media(max-width:1024px){ .faculty__grid--large{ grid-template-columns:repeat(3,1fr); } }
     @media(max-width:640px){ .faculty__grid--large{ grid-template-columns:repeat(2,1fr); } }
@@ -41,257 +39,471 @@
       </div>
     </div>
 
-    <!-- Docentes principales -->
     <section class="section" aria-labelledby="doc-title">
       <div class="container">
         <div class="section-header reveal">
           <div class="section-label">Nuestro Equipo</div>
-          <h2 id="doc-title" class="section-title">Docentes <span>Principales</span></h2>
+          <h2 id="doc-title" class="section-title">Plana <span>Docente</span></h2>
         </div>
 
         <div class="faculty__grid faculty__grid--large">
 
+          <!-- 01 -->
           <div class="faculty-card reveal">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. David Jaulis Quispe" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="David Jaulis Quispe" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d1-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d1-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d01-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d01-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
               <div class="faculty-card__name">Dr. David Jaulis Quispe</div>
               <div class="faculty-card__role">Director de Escuela</div>
-              <div class="faculty-card__specialty"> · </div>
+              <div class="faculty-card__specialty">Docente Asociado</div>
             </div>
           </div>
 
+          <!-- 02 -->
           <div class="faculty-card reveal reveal-delay-1">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Jose Aguilar Delgado" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Alex Adrianzen Jimenez" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d2-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d2-em"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Jose Aguilar Delgado</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal reveal-delay-2">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Mg. Alex Adrianzen Jimenez" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d3-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d3-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d02-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d02-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
               <div class="faculty-card__name">Mg. Alex Adrianzen Jimenez</div>
               <div class="faculty-card__role">Docente Asociado</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal reveal-delay-3">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Luis Muñoz Diaz" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d4-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d4-em"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Luis Muñoz Diaz</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Felix Castillo Vera" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d5-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d5-em"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Felix Castillo Vera</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
-            </div>
-          </div>
-
-          <div class="faculty-card reveal reveal-delay-1">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Mg. Alberto Asma Alva" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d6-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d6-em"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Mg. Alberto Asma Alva</div>
-              <div class="faculty-card__role">Docente Asociado</div>
-              <div class="faculty-card__specialty">· </div>
-            </div>
-          </div>
-
+          <!-- 03 -->
           <div class="faculty-card reveal reveal-delay-2">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Mg. Felix Sulen Lau" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Jose Aguilar Delgado" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d7-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d7-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d03-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d03-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Mg. Felix Sulen Lau</div>
-              <div class="faculty-card__role">Docente Asociado</div>
-              <div class="faculty-card__specialty"> · </div>
+              <div class="faculty-card__name">Dr. Jose Aguilar Delgado</div>
+              <div class="faculty-card__role">Docente Principal</div>
             </div>
           </div>
 
+          <!-- 04 -->
           <div class="faculty-card reveal reveal-delay-3">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Jesus Benitez Gamboa" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Alberto Asmat Alva" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d8-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d8-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d04-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d04-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Alberto Asmat Alva</div>
+              <div class="faculty-card__role">Docente Asociado</div>
+            </div>
+          </div>
+
+          <!-- 05 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Jesus Benitez Gamboa" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d05-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d05-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
               <div class="faculty-card__name">Dr. Jesus Benitez Gamboa</div>
               <div class="faculty-card__role">Docente Asociado</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal">
+          <!-- 06 -->
+          <div class="faculty-card reveal reveal-delay-1">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Enrique Reyna Calmet" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Enrique Calmet Reyna" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d9-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d9-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d06-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d06-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Enrique Reyna Calmet</div>
+              <div class="faculty-card__name">Dr. Enrique Calmet Reyna</div>
               <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal reveal-delay-1">
+          <!-- 07 -->
+          <div class="faculty-card reveal reveal-delay-2">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Eduardo Cano Urbina" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Eduardo Cano Urbina" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d10-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d10-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d07-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d07-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
               <div class="faculty-card__name">Dr. Eduardo Cano Urbina</div>
               <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal reveal-delay-2">
+          <!-- 08 -->
+          <div class="faculty-card reveal reveal-delay-3">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Jose Castañeda Melendez" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Jose Castañeda Melendez" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d11-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d11-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d08-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d08-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
               <div class="faculty-card__name">Dr. Jose Castañeda Melendez</div>
               <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
-          <div class="faculty-card reveal reveal-delay-3">
-            <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Winston Concepción Velásquez" class="faculty-card__img" loading="lazy" />
-              <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d12-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d12-em"><i class="fa-solid fa-envelope"></i></a>
-              </div>
-            </div>
-            <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Winston Concepción Velásquez</div>
-              <div class="faculty-card__role">Docente Auxiliar</div>
-              <div class="faculty-card__specialty"> · </div>
-            </div>
-          </div>
-
-
+          <!-- 09 -->
           <div class="faculty-card reveal">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Mg. Aldo Cotrina Villar" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Felix Castillo Vera" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
-                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d9-li"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d9-em"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d09-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d09-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Mg. Aldo Cotrina Villar</div>
-              <div class="faculty-card__role">Tipo B1</div>
-              <div class="faculty-card__specialty"> · </div>
+              <div class="faculty-card__name">Dr. Felix Castillo Vera</div>
+              <div class="faculty-card__role">Docente Principal</div>
             </div>
           </div>
 
+          <!-- 10 -->
           <div class="faculty-card reveal reveal-delay-1">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Julio Esquivel Paredes" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Winston Concepción Velásquez" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
                 <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d10-li"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d10-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Julio Esquivel Paredes</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
+              <div class="faculty-card__name">Dr. Winston Concepción Velásquez</div>
+              <div class="faculty-card__role">Docente Auxiliar</div>
             </div>
           </div>
 
+          <!-- 11 -->
           <div class="faculty-card reveal reveal-delay-2">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Carlos Franco Cornelio" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Aldo Cotrina Villar" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
                 <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d11-li"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d11-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Dr. Carlos Franco Cornelio</div>
-              <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
+              <div class="faculty-card__name">Mg. Aldo Cotrina Villar</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B1</div>
             </div>
           </div>
 
+          <!-- 12 -->
           <div class="faculty-card reveal reveal-delay-3">
             <div class="faculty-card__img-wrap">
-              <img src="assets/images/hero_campus.jpg" alt="Dr. Luzmila Leon Mostacero" class="faculty-card__img" loading="lazy" />
+              <img src="assets/images/hero_campus.jpg" alt="Julio Esquivel Paredes" class="faculty-card__img" loading="lazy" />
               <div class="faculty-card__overlay">
                 <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d12-li"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d12-em"><i class="fa-solid fa-envelope"></i></a>
               </div>
             </div>
             <div class="faculty-card__info">
-              <div class="faculty-card__name">Dra. Luzmila Leon Mostacero</div>
+              <div class="faculty-card__name">Mg. Julio Esquivel Paredes</div>
               <div class="faculty-card__role">Docente Principal</div>
-              <div class="faculty-card__specialty"> · </div>
             </div>
           </div>
 
+          <!-- 13 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Carlos Franco Cornelio" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d13-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d13-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Carlos Franco Cornelio</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 14 -->
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="David Jaulis Quispe" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d14-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d14-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. David Jaulis Quispe</div>
+              <div class="faculty-card__role">Docente Asociado</div>
+            </div>
+          </div>
+
+          <!-- 15 -->
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Luzmila Leon Mostacero" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d15-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d15-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dra. Luzmila Leon Mostacero</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 16 -->
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Nilo Loayza Leon" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d16-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d16-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Nilo Loayza Leon</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B3</div>
+            </div>
+          </div>
+
+          <!-- 17 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Luis Muñoz Diaz" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d17-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d17-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Luis Muñoz Diaz</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 18 -->
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Laura Olguin Villalobos" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d18-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d18-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Laura Olguin Villalobos</div>
+              <div class="faculty-card__role">Docente Auxiliar</div>
+            </div>
+          </div>
+
+          <!-- 19 -->
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Martin Otiniano Cruz" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d19-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d19-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Martin Otiniano Cruz</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B1</div>
+            </div>
+          </div>
+
+          <!-- 20 -->
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Angel Polo Campos" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d20-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d20-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Angel Polo Campos</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 21 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Sergio Quezada Leiva" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d21-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d21-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Sergio Quezada Leiva</div>
+              <div class="faculty-card__role">Docente Auxiliar</div>
+            </div>
+          </div>
+
+          <!-- 22 -->
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Franklin Roncal Rodriguez" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d22-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d22-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Franklin Roncal Rodriguez</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 23 -->
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Andreas Ruiz Cusquiciban" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d23-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d23-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Andreas Ruiz Cusquiciban</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B2</div>
+            </div>
+          </div>
+
+          <!-- 24 -->
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Hugo Segura Vega" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d24-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d24-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Hugo Segura Vega</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B1</div>
+            </div>
+          </div>
+
+          <!-- 25 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Felix Sulen Lau" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d25-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d25-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Mg. Felix Sulen Lau</div>
+              <div class="faculty-card__role">Docente Asociado</div>
+            </div>
+          </div>
+
+          <!-- 26 -->
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Eberth Valverde Valverde" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d26-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d26-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Eberth Valverde Valverde</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 27 -->
+          <div class="faculty-card reveal reveal-delay-2">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Henry Ventura Aguilar" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d27-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d27-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Henry Ventura Aguilar</div>
+              <div class="faculty-card__role">Docente Principal</div>
+            </div>
+          </div>
+
+          <!-- 28 -->
+          <div class="faculty-card reveal reveal-delay-3">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Emerito Zavala Benites" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d28-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d28-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Emerito Zavala Benites</div>
+              <div class="faculty-card__role">Docente Asociado</div>
+            </div>
+          </div>
+
+          <!-- 29 -->
+          <div class="faculty-card reveal">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Rainer Zavaleta Lamela" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d29-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d29-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dr. Rainer Zavaleta Lamela</div>
+              <div class="faculty-card__role">Docente Contratado</div>
+              <div class="faculty-card__specialty">Tipo B1</div>
+            </div>
+          </div>
+
+          <!-- 30 -->
+          <div class="faculty-card reveal reveal-delay-1">
+            <div class="faculty-card__img-wrap">
+              <img src="assets/images/hero_campus.jpg" alt="Maria Zavaleta Lopez" class="faculty-card__img" loading="lazy" />
+              <div class="faculty-card__overlay">
+                <a href="#" class="faculty-card__social-btn" aria-label="LinkedIn" id="d30-li"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="faculty-card__social-btn" aria-label="Email" id="d30-em"><i class="fa-solid fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="faculty-card__info">
+              <div class="faculty-card__name">Dra. Maria Zavaleta Lopez</div>
+              <div class="faculty-card__role">Docente Asociada</div>
+            </div>
+          </div>
 
         </div>
       </div>
