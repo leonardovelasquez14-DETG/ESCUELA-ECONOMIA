@@ -91,10 +91,10 @@
               compromiso con el desarrollo sostenible del norte del Perú.
             </p>
             <div class="footer__social">
-              <a href="#" class="footer__social-btn" aria-label="Facebook" id="footer-facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="footer__social-btn" aria-label="Instagram" id="footer-instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="footer__social-btn" aria-label="YouTube" id="footer-youtube"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="footer__social-btn" aria-label="LinkedIn" id="footer-linkedin"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/EscuelaProfesionaldeEconomiaUNT" class="footer__social-btn" aria-label="Facebook" id="footer-facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/escuela_de_economia_unt" class="footer__social-btn" aria-label="Instagram" id="footer-instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UC-zYF1Th2JCRxCxurCaKisw" class="footer__social-btn" aria-label="YouTube" id="footer-youtube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.linkedin.com/school/universidad-nacional-de-trujillo/" class="footer__social-btn" aria-label="LinkedIn" id="footer-linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
 
@@ -167,5 +167,6 @@
   }
 
 })();
+
 
 
