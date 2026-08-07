@@ -1,4 +1,4 @@
-﻿/* =============================================
+/* =============================================
    COMPONENTS.JS — Navbar + Footer compartidos
    Escuela de Economía, UNT
    Inyecta el navbar y footer en todas las páginas
@@ -112,6 +112,7 @@
             <div class="footer__links">
               <a href="noticias.html"  class="footer__link"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Noticias</a>
               <a href="biblioteca.html" class="footer__link" id="footer-biblioteca"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Biblioteca Virtual</a>
+              <a href="https://jobboard.universia.net/unitruoportunidades" target="_blank" rel="noopener" class="footer__link" id="footer-bolsa"><i class="fa-solid fa-chevron-right" style="font-size:0.6rem;"></i> Bolsa de Trabajo</a>
             </div>
           </div>
 

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Evolución histórica, institucional y epistemológica de la Escuela Profesional de Economía de la Universidad Nacional de Trujillo." />
+  <title>Historia — Escuela de Economía · UNT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <style>
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding: var(--space-8) 0; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 3px;
+      background: var(--gradient-primary);
+      transform: translateX(-50%);
+    }
+    @media(max-width: 768px){ .timeline::before { left: 24px; } }
+
+    .timeline-item {
+      display: flex;
+      gap: var(--space-8);
+      margin-bottom: var(--space-10);
+      position: relative;
+    }
+    .timeline-item:nth-child(odd)  { flex-direction: row-reverse; }
+    .timeline-item:nth-child(even) { flex-direction: row; }
+    @media(max-width: 768px){
+      .timeline-item, .timeline-item:nth-child(odd) { flex-direction: row; padding-left: 60px; }
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 50%;
+      top: 20px;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--gradient-primary);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 4px 16px rgba(200,16,46,0.35);
+      flex-shrink: 0;
+    }
+    @media(max-width: 768px){ .timeline-dot { left: 0; transform: none; } }
+
+    .timeline-card {
+      width: calc(50% - 60px);
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6) var(--space-7);
+      box-shadow: var(--shadow-card);
+      transition: transform var(--transition-base), box-shadow var(--transition-base);
+    }
+    .timeline-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(200,16,46,0.12);
+    }
+    @media(max-width: 768px){ .timeline-card { width: 100%; } }
+
+    .timeline-card__year {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--clr-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-2);
+    }
+    .timeline-card__title {
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--clr-text);
+      margin-bottom: var(--space-3);
+      line-height: 1.3;
+    }
+    .timeline-card__text {
+      font-size: var(--text-sm);
+      color: var(--clr-text-secondary);
+      line-height: 1.7;
+    }
+    .timeline-card__figure {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      margin-top: var(--space-3);
+      font-size: var(--text-xs);
+      color: var(--clr-primary);
+      font-weight: 600;
+      background: rgba(200,16,46,0.07);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+    }
+
+    /* ── CONTENT SECTIONS ── */
+    .hist-section { margin-bottom: var(--space-16); }
+    .hist-section__label {
+      font-size: var(--text-sm);
+      font-weight: 700;
+      color: var(--clr-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-3);
+    }
+    .hist-section__title {
+      font-size: var(--text-3xl);
+      font-weight: 800;
+      color: var(--clr-text);
+      margin-bottom: var(--space-5);
+      line-height: 1.25;
+    }
+    .hist-section__title span { color: var(--clr-primary); }
+    .hist-section__body {
+      font-size: var(--text-base);
+      color: var(--clr-text-secondary);
+      line-height: 1.85;
+      max-width: 820px;
+    }
+    .hist-section__body p { margin-bottom: var(--space-5); }
+    .hist-section__body h3 {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--clr-text);
+      margin: var(--space-8) 0 var(--space-4);
+      padding-left: var(--space-4);
+      border-left: 4px solid var(--clr-primary);
+    }
+    .hist-section__body ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: var(--space-5);
+    }
+    .hist-section__body ul li {
+      padding: var(--space-2) 0 var(--space-2) var(--space-6);
+      position: relative;
+      color: var(--clr-text-secondary);
+      font-size: var(--text-base);
+      line-height: 1.7;
+    }
+    .hist-section__body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 14px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--clr-primary);
+    }
+
+    /* ── TABLES ── */
+    .hist-table-wrap { overflow-x: auto; margin: var(--space-8) 0; }
+    .hist-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+      background: var(--clr-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .hist-table thead tr {
+      background: var(--gradient-primary);
+      color: #fff;
+    }
+    .hist-table th {
+      padding: var(--space-4) var(--space-5);
+      text-align: left;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+    }
+    .hist-table td {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--clr-border);
+      color: var(--clr-text-secondary);
+      line-height: 1.5;
+    }
+    .hist-table tbody tr:hover { background: rgba(200,16,46,0.03); }
+    .hist-table tbody tr:last-child td { border-bottom: none; }
+    .hist-table td:first-child { font-weight: 700; color: var(--clr-primary); white-space: nowrap; }
+
+    /* ── PARADIGM CARDS ── */
+    .paradigm-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: var(--space-6);
+      margin: var(--space-8) 0;
+    }
+    @media(max-width: 768px){ .paradigm-grid { grid-template-columns: 1fr; } }
+
+    .paradigm-card {
+      background: var(--clr-surface);
+      border: 1px solid var(--clr-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-7);
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+    .paradigm-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+    .paradigm-card__period {
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--clr-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-3);
+    }
+    .paradigm-card__name {
+      font-size: var(--text-lg);
+      font-weight: 800;
+      color: var(--clr-text);
+      margin-bottom: var(--space-4);
+    }
+    .paradigm-card__focus {
+      font-size: var(--text-sm);
+      color: var(--clr-text-secondary);
+      line-height: 1.6;
+      margin-bottom: var(--space-4);
+    }
+    .paradigm-card__profile {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--clr-primary);
+      background: rgba(200,16,46,0.07);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+    }
+
+    /* ── QUOTE ── */
+    .hist-quote {
+      border-left: 5px solid var(--clr-primary);
+      background: rgba(200,16,46,0.04);
+      padding: var(--space-6) var(--space-8);
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      margin: var(--space-8) 0;
+      font-size: var(--text-base);
+      font-style: italic;
+      color: var(--clr-text-secondary);
+      line-height: 1.8;
+    }
+    .hist-quote strong { color: var(--clr-primary); font-style: normal; }
+
+    /* ── STAT HIGHLIGHT ── */
+    .hist-stat {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--gradient-primary);
+      color: #fff;
+      padding: var(--space-6) var(--space-10);
+      border-radius: var(--radius-xl);
+      margin: var(--space-6) 0;
+      box-shadow: 0 8px 32px rgba(200,16,46,0.3);
+    }
+    .hist-stat__num {
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .hist-stat__label {
+      font-size: var(--text-sm);
+      font-weight: 600;
+      opacity: 0.9;
+      margin-top: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main id="main-content">
+
+    <div class="page-hero" aria-label="Historia de la Escuela">
+      <div class="container">
+        <div class="page-hero__content">
+          <nav class="page-hero__breadcrumb" aria-label="Miga de pan">
+            <a href="index.html">Inicio</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <a href="nosotros.html">Nosotros</a>
+            <span class="page-hero__breadcrumb-sep">›</span>
+            <span>Historia</span>
+          </nav>
+          <h1 class="page-hero__title">Historia de la <span>Escuela</span></h1>
+          <p class="page-hero__subtitle">Evolución histórica, institucional y epistemológica de la Escuela Profesional de Economía de la UNT.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─── INTRODUCCIÓN ─── -->
+    <section class="section" aria-labelledby="intro-title">
+      <div class="container">
+        <div class="hist-section reveal">
+          <div class="hist-section__label">Contexto Fundacional</div>
+          <h2 id="intro-title" class="hist-section__title">Antecedentes <span>Históricos</span></h2>
+          <div class="hist-section__body">
+            <p>La comprensión de la génesis de la Escuela Profesional de Economía requiere una inmersión en el contexto fundacional de su institución matriz: la <strong>Universidad Nacional de Trujillo (UNT)</strong>, erigida como la primera universidad republicana del Perú.</p>
+            <p>La UNT fue fundada el <strong>10 de mayo de 1824</strong>, en pleno apogeo de las guerras de independencia, mediante un decreto expedido desde la ciudad de Caraz por el libertador Simón Bolívar y refrendado por su Ministro General, el ilustre José Faustino Sánchez Carrión, conocido como "El Solitario de Sayán".</p>
+            <p>No fue sino hasta el <strong>17 de agosto de 1831</strong>, bajo el gobierno del Mariscal Agustín Gamarra, que se emitió el Acta de Instalación. El <strong>12 de octubre de 1831</strong> se formalizó la instalación bajo el rectorado del Dr. Carlos Pedemonte y Talavera.</p>
+            <p>El verdadero catalizador para la irrupción de los estudios económicos fue la transformación de la base productiva de La Libertad a principios del siglo XX: el auge agroexportador impulsado por los grandes latifundios azucareros generó una demanda de cuadros técnicos que el empirismo de los tenedores de libros no podía satisfacer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TIMELINE ─── -->
+    <section class="section" style="background: var(--clr-bg-alt);" aria-labelledby="timeline-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Cronología</div>
+          <h2 id="timeline-title" class="section-title">Hitos <span>Institucionales</span></h2>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-landmark"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">10 de Mayo, 1824</div>
+              <div class="timeline-card__title">Fundación de la UNT</div>
+              <div class="timeline-card__text">Decreto fundacional expedido desde Caraz por el libertador Simón Bolívar. Primera universidad republicana del Perú.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Simón Bolívar / J.F. Sánchez Carrión</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-building-columns"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">15 de Junio, 1935</div>
+              <div class="timeline-card__title">Creación del Instituto Superior de Ciencias Comerciales</div>
+              <div class="timeline-card__text">Primera respuesta institucional para profesionalizar la gestión económica en el norte peruano. Ofrecía los títulos de Contador Mercantil (2 años) y Contador Público (3 años).</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Dr. Ignacio Meave Seminario</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-certificate"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">3 de Septiembre, 1938</div>
+              <div class="timeline-card__title">Primer Título de Contador Público del Perú</div>
+              <div class="timeline-card__text">La UNT confirió a Luis Burga Farro el primer título de Contador Público emitido en la historia del país, adelantándose a San Marcos, la Universidad Católica, San Agustín de Arequipa y San Antonio Abad del Cusco.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Dr. Luis Burga Farro</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-rotate"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">1942 — 1943</div>
+              <div class="timeline-card__title">Reorganización y Ampliación del Plan de Estudios</div>
+              <div class="timeline-card__text">Reorganización de la Escuela de Ciencias Económicas Comerciales. El plan de estudios se extendió a cuatro años académicos más un año obligatorio de prácticas preprofesionales.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Dr. Luis Burga Farro</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-scale-balanced"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">30 de Enero, 1958</div>
+              <div class="timeline-card__title">Promulgación de la Ley N° 12880</div>
+              <div class="timeline-card__text">El Estado peruano autorizó la elevación y conversión definitiva en la <strong>Facultad de Ciencias Económicas y Comerciales</strong>, otorgando a la Economía su estatus científico autónomo.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-building"></i> Congreso de la República</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">15 de Junio, 1959</div>
+              <div class="timeline-card__title">Instalación Formal de la Facultad</div>
+              <div class="timeline-card__text">Se instaló la Facultad con plan curricular diferenciado por disciplinas. Se nombró primer Decano al Dr. Burga Farro y primer Director de Economía al Dr. Miguel López Francés, consolidando la tríada: Economía, Contabilidad, Administración.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Dr. Miguel López Francés</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-file-contract"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">9 de Julio, 1971</div>
+              <div class="timeline-card__title">Autorización Definitiva — Resolución N° 600-71-CONUP</div>
+              <div class="timeline-card__text">El CONUP expidió la resolución otorgando autorización definitiva de funcionamiento, estructurando el Programa Académico de Economía en cuatro secciones: Teoría Económica, Desarrollo Económico, Problemas Económicos y Economía de Empresas.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-building"></i> CONUP</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-book-open"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">25 de Febrero, 2014</div>
+              <div class="timeline-card__title">Plan de Estudios Neoliberal — R.C.U. N° 0093-2014</div>
+              <div class="timeline-card__text">Aprobación del plan de estudios con fuerte énfasis en Microeconomía Neoclásica, Finanzas Corporativas y Econometría. Cristalización del paradigma cuantitativo iniciado en los años noventa.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-building"></i> Consejo Universitario UNT</div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"><i class="fa-solid fa-star"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-card__year">Diciembre, 2017</div>
+              <div class="timeline-card__title">Reforma Curricular por Competencias</div>
+              <div class="timeline-card__text">La reforma más ambiciosa del siglo XXI. Liderada por el Dr. Franklin Roncal Rodríguez, reemplazó el enfoque disciplinario por el modelo de educación basada en competencias, alineado con el MOEDUNT y la Agenda 2030 de las Naciones Unidas.</div>
+              <div class="timeline-card__figure"><i class="fa-solid fa-user"></i> Dr. Franklin Roncal Rodríguez</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── TABLA HITOS ─── -->
+    <section class="section" aria-labelledby="hitos-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Resumen</div>
+          <h2 id="hitos-title" class="section-title">Tabla de <span>Hitos Históricos</span></h2>
+        </div>
+        <div class="hist-table-wrap reveal">
+          <table class="hist-table">
+            <thead>
+              <tr>
+                <th>Hito Histórico</th>
+                <th>Fecha / Año</th>
+                <th>Acontecimiento</th>
+                <th>Figura Clave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Fundación de la UNT</td><td>10 May 1824</td><td>Decreto fundacional desde Caraz.</td><td>Simón Bolívar / J.F. Sánchez Carrión</td></tr>
+              <tr><td>Creación del Instituto</td><td>15 Jun 1935</td><td>Nace el Instituto Superior de Ciencias Comerciales.</td><td>Dr. Ignacio Meave Seminario</td></tr>
+              <tr><td>Primer Título Nacional</td><td>03 Sep 1938</td><td>Emisión del primer título de Contador Público del Perú.</td><td>Dr. Luis Burga Farro</td></tr>
+              <tr><td>Reorganización</td><td>1942 – 1943</td><td>Extensión de la carrera a cuatro años más un año de práctica.</td><td>Dr. Luis Burga Farro</td></tr>
+              <tr><td>Creación de la Facultad</td><td>30 Ene 1958</td><td>Promulgación de la Ley N° 12880.</td><td>Congreso de la República</td></tr>
+              <tr><td>Instalación y Currículo</td><td>15 Jun 1959</td><td>Instalación de la Facultad y diferenciación de la Escuela de Economía.</td><td>Dr. Miguel López Francés</td></tr>
+              <tr><td>Autorización Definitiva</td><td>09 Jul 1971</td><td>Resolución N° 600-71-CONUP — Cuatro secciones académicas.</td><td>CONUP</td></tr>
+              <tr><td>Plan de Estudios 2014</td><td>25 Feb 2014</td><td>R.C.U. N° 0093-2014/UNT — Paradigma cuantitativo.</td><td>Consejo Universitario</td></tr>
+              <tr><td>Reforma por Competencias</td><td>Dic 2017</td><td>Modelo basado en competencias + RSU + Agenda 2030.</td><td>Dr. Franklin Roncal Rodríguez</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── PARADIGMAS CURRICULARES ─── -->
+    <section class="section" style="background: var(--clr-bg-alt);" aria-labelledby="paradigm-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">Evolución Epistemológica</div>
+          <h2 id="paradigm-title" class="section-title">Paradigmas <span>Curriculares</span></h2>
+          <p class="section-subtitle">El diseño curricular ha sido extraordinariamente poroso a las sacudidas políticas y económicas del Estado peruano.</p>
+        </div>
+
+        <div class="paradigm-grid">
+          <div class="paradigm-card reveal">
+            <div class="paradigm-card__period">1971 – 1989</div>
+            <div class="paradigm-card__name">Estructuralista / Humanista</div>
+            <div class="paradigm-card__focus">Prioridad en Ciencias Sociales, teoría de la dependencia (CEPAL), Historia Económica y Filosofía. Fuerte influencia del Estado planificador velasquista.</div>
+            <div class="paradigm-card__profile">Perfil: "Ingeniero Social" — Planificador Estatal</div>
+          </div>
+          <div class="paradigm-card reveal reveal-delay-1">
+            <div class="paradigm-card__period">1990 – 2014</div>
+            <div class="paradigm-card__name">Neoliberal / Cuantitativo</div>
+            <div class="paradigm-card__focus">Microeconomía Neoclásica, Econometría, Finanzas Corporativas y libre mercado. Ruptura con el paradigma intervencionista tras el shock de estabilización de 1990.</div>
+            <div class="paradigm-card__profile">Perfil: Analista de Mercados — Evaluador de Proyectos</div>
+          </div>
+          <div class="paradigm-card reveal reveal-delay-2">
+            <div class="paradigm-card__period">2017 – Presente</div>
+            <div class="paradigm-card__name">Por Competencias / RSU</div>
+            <div class="paradigm-card__focus">Competitividades integrales, I+D+i, Tecnologías de la Información (TICs), Sostenibilidad y Responsabilidad Social Universitaria articulada con la Agenda 2030 ONU.</div>
+            <div class="paradigm-card__profile">Perfil: Gestor Estratégico — Investigador con sensibilidad social</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── DEMOGRAFÍA ESTUDIANTIL ─── -->
+    <section class="section" aria-labelledby="demo-title">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header reveal">
+          <div class="section-label">Impacto Social</div>
+          <h2 id="demo-title" class="section-title">Motor de <span>Movilidad Social</span></h2>
+        </div>
+        <div class="reveal">
+          <div class="hist-quote">
+            La formación impartida en esta Facultad no es solo un ejercicio académico, sino que representa
+            la principal, y a menudo única, herramienta de emancipación financiera e intelectual para miles
+            de jóvenes liberteños y del norte del país, <strong>rompiendo ciclos intergeneracionales de pobreza.</strong>
+          </div>
+          <div style="text-align:center; margin: var(--space-8) 0;">
+            <div class="hist-stat">
+              <div class="hist-stat__num">&gt; 93%</div>
+              <div class="hist-stat__label">del alumnado proviene de sectores socioeconómicos vulnerables o clase media emergente</div>
+            </div>
+          </div>
+          <div class="hist-section__body">
+            <p>La información recopilada por la Oficina de Servicio Social y Bienestar Universitario de la UNT sobre los ingresantes a la carrera de Economía (generaciones 2016 y 2017) revela que solo el <strong>6.45%</strong> se ubica en la Categoría socioeconómica "C" (familias con ingresos superiores a cuatro remuneraciones mínimas vitales). El resto proviene de familias de obreros, agricultores eventuales, trabajadores independientes o situación de extrema pobreza.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONCLUSIONES ─── -->
+    <section class="section" style="background: var(--clr-bg-alt);" aria-labelledby="concl-title">
+      <div class="container" style="max-width: 900px;">
+        <div class="section-header reveal">
+          <div class="section-label">Reflexión Final</div>
+          <h2 id="concl-title" class="section-title"><span>Conclusiones</span></h2>
+        </div>
+        <div class="hist-section__body reveal">
+          <ul>
+            <li>La génesis de la disciplina económica en el norte peruano nació de la necesidad pragmática del auge agroexportador, no de la especulación filosófica. Del núcleo germinal del Instituto (1935) emergió Luis Burga Farro —el primer Contador Público del país— y Miguel López Francés, quienes consolidaron la Economía como Facultad autónoma en 1958.</li>
+            <li>El diseño curricular ha sido extraordinariamente sensible a las sacudidas del Estado: del modelo estructuralista de los setenta, al paradigma neoliberal cuantitativo de los noventa, hasta el modelo actual por competencias con énfasis en Responsabilidad Social y la Agenda 2030.</li>
+            <li>La escuela funciona como motor irremplazable de movilidad social: con más del 93% de estudiantes provenientes de sectores vulnerables, dota a miles de jóvenes de un instrumental matemático, teórico y tecnológico de alto nivel.</li>
+            <li>Su producción científica —canon minero, microfinanzas rurales, economía agrícola ante shocks globales— demuestra que la academia provinciana no es subsidiaria de la capital, sino protagonista de su propio desarrollo.</li>
+          </ul>
+          <div class="hist-quote" style="margin-top:var(--space-8);">
+            La Escuela Profesional de Economía de la UNT honra fielmente el espíritu fundacional de Bolívar y Sánchez Carrión:
+            <strong>cultivar el intelecto no como un fin vanidoso, sino como el principal instrumento para liberar e ilustrar a los pueblos de la República.</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-container"></div>
+  <script src="js/components.js"></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</body>
+</html>
